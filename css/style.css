@@ -20,14 +20,15 @@ header .container .menu-bars {
 }
 header .container .menu {
   display: none;
+  flex: 1;
 }
 @media (min-width: 992px) {
   header .container .menu {
     display: block;
   }
 }
-@media (min-width: 2500px) {
-  header .container {
-    max-width: 2048px;
-  }
+header .container .menu .top-menu {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
 }

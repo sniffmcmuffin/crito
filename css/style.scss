@@ -20,15 +20,20 @@ header {
 
         .menu {
             display:none;
+            flex: 1; // FÖr att få det gå hela vägen till loggan.
 
             @media (min-width: 992px) {
                 display: block;
             }
-        }
-   
-        @media (min-width: 2500px) {
-            max-width: 2048px;
-        }
+
+            .top-menu {
+                display: flex;
+                justify-content: space-between;
+
+                // Man kan tillfälligt lägga till borders för att se vart man grejar.
+                border: 1px solid black;
+            }
+        } 
 
     }
     
