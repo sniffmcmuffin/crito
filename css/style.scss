@@ -31,10 +31,26 @@ header {
                 justify-content: space-between;
 
                 // Man kan tillfälligt lägga till borders för att se vart man grejar.
-                border: 1px solid black;
+                // border: 1px solid black;
+
+                .contact-information {
+                    display: flex;
+
+                    .content-box {
+                        padding-right: 30px;
+                        margin-right: 30px;
+                        border-right: 1px solid #DAD9D3;
+
+                        &.last { // Läs på hur & tecknet funkar egentligen
+                            border: none;
+                        }
+                    }
+
+                }
+
             }
         } 
-
+ 
     }
     
 }
