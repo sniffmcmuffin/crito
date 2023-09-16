@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600:700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
 html, bopdy {
     color: #191919;
     font-family: 'Inter', sans-serif;
@@ -12,7 +12,7 @@ html, bopdy {
     border: 1px solid #F9D783;
     color: #191919;
     text-decoration: none;
-    padding: 8px 25px;
+    padding: 12px 30px;
     font-weight: 16px;
     border-radius: 25px; // Runda hörn
 
@@ -27,6 +27,39 @@ html, bopdy {
         color: #F0EFE9;
     }
 
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: 1px solid #191919;
+    color: #191919;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 16px;
+    border-radius: 25px; // Runda hörn
+
+    i {
+        margin-left: 8px;
+        font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+    }
+
+    &:hover {
+        background-color: #191919;
+        border: 1px solid #191919;
+        color: #F0EFE9;
+    }
+
+}
+
+.section-title {
+    h2 {
+        color: #191919;        
+    }
+    
+    // p {
+        color: #F94D1C;
+
+    }
 }
 
 header {
@@ -146,12 +179,113 @@ header {
                         }
 
                     }
+                } 
+
+                .btn-login {
+                    padding-top: 12px;
+                    padding-bottom: 13px;
                 }
-
-
             }
         } 
  
     }
     
 }
+
+.showcase {
+    background-color: #F0EFE9;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content { 
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+            
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+
+            h1 { 
+              font-family: 'DM Sans', sans-serif;
+              font-weight: 700;
+              font-size: 40px;
+             // text-align: center;
+
+              @media (min-width: 768px) {
+                font-size: 70px;
+              }
+
+              @media (min-width: 1400px) {
+                font-size: 86px;
+              }
+            }
+
+            p {
+               font-size: 18px; 
+               padding-top: 40px;
+               padding-bottom: 40px;
+               padding-left: 10px;
+               padding-right: 10px;
+               
+               @media (min-width: 768px) {
+                font-size: 20px;
+                padding-left: 0;
+                padding-right: 0;
+              }
+            }
+
+            a {
+                margin-right: 0px;
+                display: block;
+                margin-bottom: 20px;
+
+                @media (min-width: 768px) {
+                    display: inline-block;
+                    margin-right: 10px;
+                  }
+            }
+
+        }
+
+        img {
+            display: none;
+            margin-right: -50px;
+
+            @media (min-width: 1200px) {
+                display: block;
+            }
+        
+        }
+
+    }
+
+}
+
+.grid-1 {
+
+    .parent {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr; // Fractions, antal fr lika med antal kolumner. // rpeat( 2, 1fr) om man vill ha 2, etc
+        object-fit: cover;
+        object-position: bottom;
+
+        //justify-content: space-between;
+        // align-items: center;
+        // height: 100vh; // Viewport height
+
+        .child { // Se till att bilderna funkar alla skärmar i responsivt.
+            padding: 20px;
+            justify-content: space-evenly;
+              
+        }
+    }
+}
+
+.project-and-case [
+
+]
