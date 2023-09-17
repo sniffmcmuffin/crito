@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600:700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
+
 html, bopdy {
     color: #191919;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
+}
+
+.wrapper-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
 }
 
 .btn-yellow {
@@ -51,15 +59,55 @@ html, bopdy {
 
 }
 
-.section-title {
-    h2 {
-        color: #191919;        
+.btn-black {
+    background-color: #191919;
+    border: 1px solid #191919;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 16px;
+    border-radius: 25px; // Runda hörn
+
+    i {
+        margin-left: 8px;
+        font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
     }
-    
-    // p {
-        color: #F94D1C;
+
+    &:hover {
+        background-color: #FFFFFF;
+        border: 1px solid #191919;
+        color: #191919;
+    }
+
+}
+
+.section-title {
+    padding-top: 70px;
+    padding-bottom: 40px;
+
+    @media (min-width: 768px) {
+        padding-top: 120px;
+        padding-bottom: 90px;
 
     }
+
+    h2 {
+        color: #191919;  
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 45px;     
+    }
+
+    p {
+        color: #F94D1C;
+        margin-bottom: 10px;
+    }    
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -286,6 +334,63 @@ header {
     }
 }
 
-.project-and-case [
+.project-and-case {
+    .container {
 
-]
+        .section-title {
+            text-align: center;
+        }
+
+        .project-and-cases {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            @media (min-width: 768px) {
+                 grid-template-columns: 1fr 1fr; 
+            }          
+
+            article {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                h3 {
+                    font-family: 'DM Sans', sans-serif;
+                    font-weight: 700;
+                    font-size: 22px; 
+                    padding-top: 35px;
+                    padding-bottom: 16;
+                    border-bottom: 1px solid #DAD9D3;
+                }
+
+                a { // Få den växla till svart när man för musen över.
+                    padding: 15px; 
+                    display: block; // För det är inline.
+                    text-align: right;
+                    font-family: 'Inter', sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    color: #191919;
+
+                    i {
+                        margin-left: 3px;
+                    }
+
+                }
+            }
+        }
+        
+        .center-content {
+            margin-top: 50px;
+            margin-bottom: 90px;
+        }
+    } 
+
+}
