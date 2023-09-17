@@ -284,6 +284,68 @@ header .container .menu .main-menu .btn-login {
   justify-content: space-evenly;
 }
 
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.trusted-companies .container .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.trusted-companies .container .section-title {
+  text-align: center;
+}
+.trusted-companies .container .thousand-companies {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .trusted-companies .container .thousand-companies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.trusted-companies .container .thousand-companies article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.trusted-companies .container .thousand-companies article img {
+  width: 100%;
+  height: auto;
+}
+.trusted-companies .container .thousand-companies article h3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  padding-top: 35px;
+  padding-bottom: 16;
+  border-bottom: 1px solid #DAD9D3;
+}
+.trusted-companies .container .thousand-companies article a {
+  padding: 15px;
+  display: block;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #191919;
+}
+.trusted-companies .container .thousand-companies article a i {
+  margin-left: 3px;
+}
+.trusted-companies .container .center-content {
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+
 .project-and-case .container .section-title {
   text-align: center;
 }
