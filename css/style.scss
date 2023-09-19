@@ -240,7 +240,7 @@ header {
     
 }
 
-.showcase {
+.showcase { // 1) Showcase section
     background-color: #F0EFE9;
 
     .container {
@@ -313,7 +313,7 @@ header {
 
 }
 
-.grid-1 {
+.grid-1 { // 2) Logotype section
 
     .parent {
         display: grid; 
@@ -334,98 +334,72 @@ header {
     }
 }
 
-.trusted-companies { // Flytta upp financial advice och risk mamangement lite. Alternastivt byt til 1 col + 2x2 row/col
+.trusted-companies { // 3) Trusted companies section
+    // Flytta upp financial advice och risk mamangement lite. Alternastivt byt til 1 col + 2x2 row/col
     .container {
 
         .grid-container {
             display: grid;
-         // grid-gap: 30px;
-         //  grid-template-columns: 2fr 1fr 1fr;
-          //  border: solid; 
-         // grid-template-rows: 50% 50%;
-          grid-template-columns: 35% auto auto; 
-          gap: 2rem 5rem;
-          }
+            // grid-gap: 30px;
+            grid-template-columns: 35% auto auto;
+            gap: 2rem 5rem;
+        }
 
         .grid-item {
-         //   display: flex;
-          //  justify-items: stretch;
-          //  gap: 5px;
 
-          .btn-yellow {
-           
-            background-color: #F9D783;
-            border: 1px solid #F9D783;
-            color: #191919;
-            text-decoration: none;
-            text-align: center; // Lista ut hur flytta ner textem lite lite jämfört med mallen.
-            padding: 10px 170px; // Kolla så den matchar i kanterna med grid ovan med en border.
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 16px; 
-            border-radius: 25px; 
-           
-        
-            i {
-                margin-left: 8px;
-                font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+            .btn-yellow {
+
+                background-color: #F9D783;
+                border: 1px solid #F9D783;
+                color: #191919;
+                text-decoration: none;
+                text-align: center; // Lista ut hur flytta ner textem lite lite jämfört med mallen.
+                padding: 12px 170px; // Kolla så den matchar i kanterna med grid ovan med en border.
+                font-family: 'Inter', sans-serif;
+                font-weight: 16px;
+                font-size: 16px;
+                border-radius: 25px;
+
+
+                i {
+                    margin-left: 8px;
+                    font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+                }
+
+                &:hover {
+                    background-color: #191919;
+                    border: 1px solid #191919;
+                    color: #F0EFE9;
+                }
+
             }
-        
-            &:hover {
-                background-color: #191919;
-                border: 1px solid #191919;
-                color: #F0EFE9;
+
+            // h2 {
+            //     font-family: 'DM Sans', sans-serif;
+            //     font-weight: 700;
+            //     font-size: 22px; 
+            //     color:#F9D783;
+            // }
+
+            h2 {
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                font-size: 45px;
+                font-weight: bold;
+                color: #191919;
             }
-        
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                font-style: normal;
+                text-align: left;
+                color: #f94d1c;
+            }
         }
 
-        h2 {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            font-size: 22px; 
-            color:#F9D783;
-          
-         //   padding-top: 35px;
-         //   padding-bottom: 16;
-          
-        }
-
-        h2 {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            font-size: 45px;
-            font-weight: bold;
-                 // line-height: 54px;
-          //  font-style: normal;
-    //        text-align: left;
-            color: #191919;
-          //  text-align: left;
-           // padding-top: 10px;
-
-        //    padding-top: 35px;
-        //    padding-bottom: 16;
-        }
-        
-
-        p {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            font-size: 18px; 
-           // line-height: 22px;
-            font-style: normal;
-            text-align: left;
-           // letter-spacing: -10px;
-            color: #f94d1c;
-          //  padding-top: 35px;
-          //  padding-bottom: 16;
-          //   border-bottom: 1px solid #b8b50e;
-        }
-         }
-
-         .grid-item-2 {
-         //   display: grid;
-           // grid-template-columns: 1fr;
-           // grid-template-rows: 1fr 1fr auto;
+        .grid-item-2 {
             padding-top: 60px;
             padding-left: 40px;
             padding-right: 40px;
@@ -433,109 +407,271 @@ header {
             h3 {
                 font-family: 'DM Sans', sans-serif;
                 font-weight: 700;
-                font-size: 22px; 
-             //   color:#F9D783;
-              
-             //   padding-top: 35px;
-             //   padding-bottom: 16;
-              
+                font-size: 22px;
             }
-
-
 
             p {
                 font-family: 'Inter', sans-serif;
                 font-weight: 500;
-                font-size: 16px; 
-              //  padding-top: 35px;
-              //  padding-bottom: 16;
-              //   border-bottom: 1px solid #b8b50e;
-            }
-            
+                font-size: 16px;
             }
 
-         .section-title {
-             text-align: left;
-             padding-top: 10px;
-            
-         }
-
-        .thousand-companies {
-           display: flex;
-           //  grid-template-columns: 1fr 1fr 1fr;
-
-            @media (min-width: 768px) {
-                 grid-template-columns: 1fr 1fr; 
-            }          
-
-
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
-                h3 {
-                    font-family: 'DM Sans', sans-serif;
-                    font-weight: 700;
-                    font-size: 22px; 
-
-                //    padding-top: 35px;
-                //    padding-bottom: 16;
-                    border-bottom: 1px solid #DAD9D3;
-                }
-
-                h2 {
-                    font-family: 'DM Sans', sans-serif;
-                    font-weight: 700;
-                    font-size: 45px; 
-                 //   padding-top: 35px;
-                 //   padding-bottom: 16;
-                  
-                }
-
-                p {
-                    font-family: 'Inter', sans-serif;
-                    font-weight: 500;
-                    font-size: 16px; 
-                  //  padding-top: 35px;
-                  //  padding-bottom: 16;
-                  //   border-bottom: 1px solid #b8b50e;
-                }
-
-
-                a { // Få den växla till svart när man för musen över.
-                    padding: 15px; 
-                    display: block; // För det är inline.
-                    text-align: right;
-                    font-family: 'Inter', sans-serif;
-                    font-size: 14px;
-                    font-weight: 500;
-                    text-decoration: none;
-                    color: #191919;
-
-                    i {
-                        margin-left: 3px;
-                    }
-
-                }
-            }
         }
+
+        .section-title {
+            text-align: left;
+            padding-top: 10px;
+
+        }
+
+        // .thousand-companies { RADERA NÄR SÄKERSTÄLLT DET EJ ANVÄNDS
+        //    display: flex;
+
+        //     @media (min-width: 768px) {
+        //          grid-template-columns: 1fr 1fr; 
+        //     }          
+
+
+
+        //         img {
+        //             width: 100%;
+        //             height: auto;
+        //         }
+
+        //         h3 {
+        //             font-family: 'DM Sans', sans-serif;
+        //             font-weight: 700;
+        //             font-size: 22px; 
+
+        //         //    padding-top: 35px;
+        //         //    padding-bottom: 16;
+        //             border-bottom: 1px solid #DAD9D3;
+        //         }
+
+        //         h2 {
+        //             font-family: 'DM Sans', sans-serif;
+        //             font-weight: 700;
+        //             font-size: 45px; 
+        //          //   padding-top: 35px;
+        //          //   padding-bottom: 16;
+
+        //         }
+
+        //         p {
+        //             font-family: 'Inter', sans-serif;
+        //             font-weight: 500;
+        //             font-size: 16px; 
+        //           //  padding-top: 35px;
+        //           //  padding-bottom: 16;
+        //           //   border-bottom: 1px solid #b8b50e;
+        //         }
+
+
+        //         a { // Få den växla till svart när man för musen över.
+        //             padding: 15px; 
+        //             display: block; // För det är inline.
+        //             text-align: right;
+        //             font-family: 'Inter', sans-serif;
+        //             font-size: 14px;
+        //             font-weight: 500;
+        //             text-decoration: none;
+        //             color: #191919;
+
+        //             i {
+        //                 margin-left: 3px;
+        //             }
+
+        //         }
+        //     }
+        // }
 
         i {
             margin-bottom: 20px;
         }
+
+        // .center-content { VAD HADE JAG DETTA TILL?
+        //     margin-top: 50px;
+        //     margin-bottom: 90px;
+        //  }
+    }
+
+.consulting-credits {
+    background-color: #F0EFE9;
+    
+    .consulting-credits {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .content { 
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+                
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+    
+            h1 { 
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                font-size: 40px;
         
-       // .center-content {
-       //     margin-top: 50px;
-       //     margin-bottom: 90px;
-       //  }
+                @media (min-width: 768px) {
+                    font-size: 70px;
+                  }
+    
+                @media (min-width: 1400px) {
+                    font-size: 86px;
+                }
+            }
+    
+            p {
+                font-size: 18px; 
+                padding-top: 40px;
+                padding-bottom: 40px;
+                padding-left: 10px;
+                padding-right: 10px;
+                  
+                @media (min-width: 768px) {
+                    font-size: 20px;
+                    padding-left: 0;
+                    padding-right: 0;
+                  }
+                }
+    
+            a {
+                margin-right: 0px;
+                display: block;
+                margin-bottom: 20px;
+  
+                @media (min-width: 768px) {
+                    display: inline-block;
+                    margin-right: 10px;
+                    }
+                }
+    
+            }
+    
+            img {
+                display: none;
+                margin-right: -50px;
+    
+                @media (min-width: 1200px) {
+                    display: block;
+                }
+            
+            }
+    
+        }
+    
+    }
+}
 
-       
-    } 
+.about-company { // 4) About Company
 
+    .container {
+        display: flex;
+        justify-content: space-between;
+       // align-items: center;
 
-.project-and-case {
+        .about-content { 
+            
+          //  padding-top: 40px;
+            padding-left: 50px;
+            margin-left: 50px;;
+            padding-bottom: 40px;
+            text-align: center;
+            
+            @media (min-width: 1200px) {
+                text-align: left;
+            }
+
+            h2 { 
+              font-family: 'DM Sans', sans-serif;
+              font-weight: 700;
+              font-size: 45px;
+              line-height: 54px;
+              font-style: normal;
+              text-align: left;
+              color: #191919;
+             // text-align: center;
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-size: 16px; 
+                font-weight: 500;
+                line-height: 32px;   
+                font-style: normal;  
+                text-align: left;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                padding-left: 10px;
+                padding-right: 10px;
+    
+                
+                @media (min-width: 768px) {
+                 font-size: 16px;
+                 padding-left: 0;
+                 padding-right: 0;
+               }
+             }
+
+            #p-2 {
+               font-family: 'Inter', sans-serif;
+               font-size: 16px; 
+               font-weight: 500;
+               line-height: 32px;   
+               font-style: normal;  
+               text-align: left;
+              // padding-top: 40px;
+          //     padding-bottom: 40px;
+               padding-left: 10px;
+               padding-right: 10px;
+               color: #f94d1c;
+
+               
+               @media (min-width: 768px) {
+                font-size: 16px;
+                padding-left: 0;
+                padding-right: 0;
+              }
+            }
+
+            a {
+                margin-right: 0px;
+                display: block;
+                margin-bottom: 20px;
+
+                @media (min-width: 768px) {
+                    display: inline-block;
+                    margin-right: 10px;
+                  }
+            }
+
+        }
+
+        img {
+          //  display: none;
+           // margin-right: -50px;
+           // width: 50%;
+           // height: 50%; 
+           object-fit: cover;
+           object-position: bottom;           
+
+            @media (min-width: 1200px) {
+                display: block;
+                width: 533px;
+                height: 615px;
+            }
+        
+        }
+
+    }
+}
+
+.project-and-case { // 5) Project and cases section
     .container {
 
         .section-title {
@@ -593,5 +729,4 @@ header {
             margin-bottom: 90px;
         }
     } 
-
 }

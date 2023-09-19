@@ -295,9 +295,9 @@ header .container .menu .main-menu .btn-login {
   color: #191919;
   text-decoration: none;
   text-align: center;
-  padding: 10px 170px;
+  padding: 12px 170px;
   font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-weight: 16px;
   font-size: 16px;
   border-radius: 25px;
 }
@@ -309,12 +309,6 @@ header .container .menu .main-menu .btn-login {
   background-color: #191919;
   border: 1px solid #191919;
   color: #F0EFE9;
-}
-.trusted-companies .container .grid-item h2 {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  color: #F9D783;
 }
 .trusted-companies .container .grid-item h2 {
   font-family: "DM Sans", sans-serif;
@@ -350,49 +344,161 @@ header .container .menu .main-menu .btn-login {
   text-align: left;
   padding-top: 10px;
 }
-.trusted-companies .container .thousand-companies {
-  display: flex;
+.trusted-companies .container i {
+  margin-bottom: 20px;
 }
-@media (min-width: 768px) {
-  .trusted-companies .container .thousand-companies {
-    grid-template-columns: 1fr 1fr;
+.trusted-companies .consulting-credits {
+  background-color: #F0EFE9;
+}
+.trusted-companies .consulting-credits .consulting-credits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trusted-companies .consulting-credits .consulting-credits .content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .trusted-companies .consulting-credits .consulting-credits .content {
+    text-align: left;
   }
 }
-.trusted-companies .container .thousand-companies img {
-  width: 100%;
-  height: auto;
-}
-.trusted-companies .container .thousand-companies h3 {
+.trusted-companies .consulting-credits .consulting-credits .content h1 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  border-bottom: 1px solid #DAD9D3;
+  font-size: 40px;
 }
-.trusted-companies .container .thousand-companies h2 {
+@media (min-width: 768px) {
+  .trusted-companies .consulting-credits .consulting-credits .content h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .trusted-companies .consulting-credits .consulting-credits .content h1 {
+    font-size: 86px;
+  }
+}
+.trusted-companies .consulting-credits .consulting-credits .content p {
+  font-size: 18px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  .trusted-companies .consulting-credits .consulting-credits .content p {
+    font-size: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.trusted-companies .consulting-credits .consulting-credits .content a {
+  margin-right: 0px;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .trusted-companies .consulting-credits .consulting-credits .content a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.trusted-companies .consulting-credits .consulting-credits img {
+  display: none;
+  margin-right: -50px;
+}
+@media (min-width: 1200px) {
+  .trusted-companies .consulting-credits .consulting-credits img {
+    display: block;
+  }
+}
+
+.about-company .container {
+  display: flex;
+  justify-content: space-between;
+}
+.about-company .container .about-content {
+  padding-left: 50px;
+  margin-left: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .about-company .container .about-content {
+    text-align: left;
+  }
+}
+.about-company .container .about-content h2 {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 45px;
-}
-.trusted-companies .container .thousand-companies p {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
-.trusted-companies .container .thousand-companies a {
-  padding: 15px;
-  display: block;
-  text-align: right;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
+  line-height: 54px;
+  font-style: normal;
+  text-align: left;
   color: #191919;
 }
-.trusted-companies .container .thousand-companies a i {
-  margin-left: 3px;
+.about-company .container .about-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.trusted-companies i {
+@media (min-width: 768px) {
+  .about-company .container .about-content p {
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.about-company .container .about-content #p-2 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #f94d1c;
+}
+@media (min-width: 768px) {
+  .about-company .container .about-content #p-2 {
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.about-company .container .about-content a {
+  margin-right: 0px;
+  display: block;
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .about-company .container .about-content a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.about-company .container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+@media (min-width: 1200px) {
+  .about-company .container img {
+    display: block;
+    width: 533px;
+    height: 615px;
+  }
 }
 
 .project-and-case .container .section-title {
