@@ -7,13 +7,6 @@ html, bopdy {
   font-weight: 400;
 }
 
-.wrapper-grid {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-}
-
 .btn-yellow {
   background-color: #F9D783;
   border: 1px solid #F9D783;
@@ -69,6 +62,31 @@ html, bopdy {
   background-color: #FFFFFF;
   border: 1px solid #191919;
   color: #191919;
+}
+
+.btn-round {
+  background-color: #FFFFFF;
+  border: 1px solid #191919;
+  color: #191919;
+  text-decoration: none;
+  font-weight: 16px;
+  border-radius: 50px;
+  padding: 12px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn-round i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.btn-round:hover {
+  background-color: #191919;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
 }
 
 .section-title {
@@ -415,90 +433,170 @@ header .container .menu .main-menu .btn-login {
   }
 }
 
+.about-company {
+  display: flex;
+}
 .about-company .container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  margin-top: 200px;
 }
-.about-company .container .about-content {
-  padding-left: 50px;
+.about-company .container .about-company-left {
   margin-left: 50px;
-  padding-bottom: 40px;
-  text-align: center;
+  width: 33.3em;
 }
-@media (min-width: 1200px) {
-  .about-company .container .about-content {
-    text-align: left;
-  }
-}
-.about-company .container .about-content h2 {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 54px;
-  font-style: normal;
-  text-align: left;
-  color: #191919;
-}
-.about-company .container .about-content p {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 32px;
-  font-style: normal;
-  text-align: left;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-@media (min-width: 768px) {
-  .about-company .container .about-content p {
-    font-size: 16px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.about-company .container .about-content #p-2 {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 32px;
-  font-style: normal;
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: #f94d1c;
-}
-@media (min-width: 768px) {
-  .about-company .container .about-content #p-2 {
-    font-size: 16px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.about-company .container .about-content a {
-  margin-right: 0px;
-  display: block;
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .about-company .container .about-content a {
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
-.about-company .container img {
+.about-company .container .about-company-left .image-1 {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
 }
 @media (min-width: 1200px) {
-  .about-company .container img {
+  .about-company .container .about-company-left .image-1 {
     display: block;
     width: 533px;
     height: 615px;
   }
+}
+.about-company .container .about-company-left .image-2 {
+  position: relative;
+  bottom: 240px;
+  right: 95px;
+}
+.about-company .container .about-company-right {
+  width: 33.3em;
+  text-align: left;
+  padding-left: 10px;
+}
+.about-company .container .about-company-right .bad-hack {
+  display: flex;
+}
+.about-company .container .about-company-right h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  font-style: normal;
+  padding-top: 4px;
+  padding-bottom: 10px;
+  color: #191919;
+}
+.about-company .container .about-company-right p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  color: rgba(25, 25, 25, 0.7);
+  padding-bottom: 50px;
+}
+.about-company .container .about-company-right #p-2 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  color: #f94d1c;
+}
+.about-company .container .about-company-right a {
+  margin-right: 0px;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .about-company .container .about-company-right a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.about-company .container .about-company-right .btn-black {
+  background-color: #191919;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-weight: 16px;
+  border-radius: 25px;
+}
+.about-company .container .about-company-right .btn-black i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.about-company .container .about-company-right .btn-black:hover {
+  background-color: #1f442b;
+  border: 1px solid #191919;
+  color: #191919;
+}
+
+.our-services {
+  background-color: #F0EFE9;
+}
+.our-services .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.our-services .container #p-2 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  color: #f94d1c;
+}
+.our-services .container .services {
+  display: grid;
+}
+.our-services .container .services h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  font-style: normal;
+  padding-top: 4px;
+  padding-bottom: 10px;
+  color: #191919;
+}
+.our-services .container .services p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  color: rgba(25, 25, 25, 0.7);
+  padding-bottom: 50px;
+}
+.our-services .container .services a {
+  margin-right: 0px;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .our-services .container .services a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.our-services .container .services .btn-black {
+  background-color: #191919;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-weight: 16px;
+  border-radius: 25px;
+}
+.our-services .container .services .btn-black i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.our-services .container .services .btn-black:hover {
+  background-color: #1f442b;
+  border: 1px solid #191919;
+  color: #191919;
 }
 
 .project-and-case .container .section-title {

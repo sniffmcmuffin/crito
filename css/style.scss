@@ -8,13 +8,7 @@ html, bopdy {
     font-weight: 400;
 }
 
-.wrapper-grid {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-}
-
+// Knappar
 .btn-yellow {
     background-color: #F9D783;
     border: 1px solid #F9D783;
@@ -77,6 +71,38 @@ html, bopdy {
         background-color: #FFFFFF;
         border: 1px solid #191919;
         color: #191919;
+    }
+
+}
+
+.btn-round {
+    background-color: #FFFFFF;
+    border: 1px solid #191919;
+    color: #191919;
+    text-decoration: none;
+   // padding: 6px 10px;
+    font-weight: 16px;
+    border-radius: 50px; // Runda hörn
+    padding: 12px;
+    text-align: center; 
+    align-items: center; // Lite kaka på kaka, men får funka för nu.
+    text-decoration: none;
+    display: inline-block;
+  //    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  
+
+
+    i {
+        margin-left: 8px;
+        font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+    }
+
+    &:hover {
+        background-color: #191919;
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
     }
 
 }
@@ -240,7 +266,8 @@ header {
     
 }
 
-.showcase { // 1) Showcase section
+// 1) Showcase section
+.showcase { 
     background-color: #F0EFE9;
 
     .container {
@@ -313,6 +340,7 @@ header {
 
 }
 
+// 2) Logotype section
 .grid-1 { // 2) Logotype section
 
     .parent {
@@ -334,7 +362,8 @@ header {
     }
 }
 
-.trusted-companies { // 3) Trusted companies section
+// 3) Trusted companies section
+.trusted-companies { 
     // Flytta upp financial advice och risk mamangement lite. Alternastivt byt til 1 col + 2x2 row/col
     .container {
 
@@ -568,76 +597,242 @@ header {
     }
 }
 
-.about-company { // 4) About Company
+// 4) About Company 
+.about-company {
+    display: flex;
 
     .container {
         display: flex;
+        flex-direction: row;
+        //  gap: 10px 20px;
         justify-content: space-between;
-       // align-items: center;
+        margin-top: 200px;
+        //  justify-content: center;
 
-        .about-content { 
-            
-          //  padding-top: 40px;
-            padding-left: 50px;
-            margin-left: 50px;;
-            padding-bottom: 40px;
-            text-align: center;
-            
-            @media (min-width: 1200px) {
-                text-align: left;
+        //  justify-content: space-between;
+        // align-items: center;
+
+        .about-company-left {
+            margin-left: 50px;
+            width: 33.3em;
+            //   position: relative;
+            //  left: 25px;
+
+
+            //  padding-top: 40px;
+            //     padding-left: 50px;
+            //    margin-left: 50px;;
+            //  padding-bottom: 40px;
+            // text-align: center;
+
+            //       @media (min-width: 1200px) {
+            //          text-align: left;
+
+            .image-1 {
+                object-fit: cover;
+                object-position: bottom;
+
+                @media (min-width: 1200px) {
+                    display: block;
+                    width: 533px;
+                    height: 615px;
+                }
+
             }
 
+            .image-2 {
+                // Finslipa den blå rutans position och kolla responsive.
+                position: relative;
+                bottom: 240px;
+                right: 95px;
+            }
+        }
+
+        .about-company-right {
+            width: 33.3em;
+            text-align: left;
+            padding-left: 10px;
+            // display:flex;
+
+
+            .bad-hack {
+                // Hitta bättre sätt få upp Intro Video 
+                display: flex;
+            }
+
+            h2 {
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                font-size: 45px;
+                line-height: 54px;
+                font-style: normal;
+                padding-top: 4px; // Finlir för mellanrum mellan p2 och h2. Hitta bättre sätt.
+                padding-bottom: 10px;
+                //  text-align: left;
+                color: #191919;
+                // text-align: center;
+            }
+
+            p {
+                // Väljer att inte ha ljusgrå text för att det försvårar läsbarheten.
+                font-family: 'Inter', sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 32px;
+                font-style: normal;
+                // letter-spacing: 0.3em;
+                //  text-align: left;
+                //  letter-spacing: -10px;
+                color: rgba(25, 25, 25, 0.7);
+                padding-bottom: 50px;
+                //  text-align: left;
+                //      padding-top: 40px;
+                //  padding-bottom: 40px;
+                // padding-left: 10px;
+                // padding-right: 10px;
+                //   @media (min-width: 768px) {
+                //   font-size: 16px;
+                //   padding-left: 0;
+                //   padding-right: 0;
+                // }
+            }
+
+            #p-2 {
+                font-family: 'Inter', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 32px;
+                font-style: normal;
+                //   text-align: left;
+                // padding-top: 40px;
+                //     padding-bottom: 40px;
+                //  padding-left: 10px;
+                // padding-right: 10px;
+                color: #f94d1c;
+
+
+                //    @media (min-width: 768px) {
+                //     font-size: 16px;
+                //     padding-left: 0;
+                //     padding-right: 0;
+                //   }
+            }
+
+            a {
+                margin-right: 0px;
+                display: block;
+                margin-bottom: 20px;
+
+                @media (min-width: 768px) {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+
+            .btn-black {
+                background-color: #191919;
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+                text-decoration: none;
+                padding: 12px 30px;
+                font-weight: 16px;
+                border-radius: 25px; // Runda hörn
+
+                i {
+                    margin-left: 8px;
+                    font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+                }
+
+                &:hover {
+                    background-color: #1f442b;
+                    border: 1px solid #191919;
+                    color: #191919;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+// 5) Our Services 
+.our-services {  
+    background-color: #F0EFE9;
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+     //   align-items: left;
+
+        padding-top: 100px;
+        padding-bottom: 40px;
+      //  text-align: left;
+        
+        // @media (min-width: 1200px) {
+        //     text-align: left;
+        // }
+ 
+       #p-2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px; 
+        font-weight: 500;
+        line-height: 32px;   
+        font-style: normal;  
+
+        color: #f94d1c;
+
+        
+     //    @media (min-width: 768px) {
+     //     font-size: 16px;
+     //     padding-left: 0;
+     //     padding-right: 0;
+     //   }
+     }
+
+        .services {      
+            display: grid;
+
+           // display:flex;
+           
             h2 { 
               font-family: 'DM Sans', sans-serif;
               font-weight: 700;
               font-size: 45px;
               line-height: 54px;
               font-style: normal;
-              text-align: left;
+              padding-top: 4px; // Finlir för mellanrum mellan p2 och h2. Hitta bättre sätt.
+              padding-bottom: 10px;
+            //  text-align: left;
               color: #191919;
              // text-align: center;
             }
 
-            p {
+            p { // Väljer att inte ha ljusgrå text för att det försvårar läsbarheten.
                 font-family: 'Inter', sans-serif;
                 font-size: 16px; 
                 font-weight: 500;
                 line-height: 32px;   
                 font-style: normal;  
-                text-align: left;
-                padding-top: 40px;
-                padding-bottom: 40px;
-                padding-left: 10px;
-                padding-right: 10px;
-    
-                
-                @media (min-width: 768px) {
-                 font-size: 16px;
-                 padding-left: 0;
-                 padding-right: 0;
-               }
+                       // letter-spacing: 0.3em;
+              //  text-align: left;
+              //  letter-spacing: -10px;
+                color: rgba(25,25,25,0.7 ); 
+                padding-bottom: 50px;
+              //  text-align: left;
+          //      padding-top: 40px;
+              //  padding-bottom: 40px;
+               // padding-left: 10px;
+               // padding-right: 10px;
+             //   @media (min-width: 768px) {
+              //   font-size: 16px;
+              //   padding-left: 0;
+              //   padding-right: 0;
+              // }
              }
 
-            #p-2 {
-               font-family: 'Inter', sans-serif;
-               font-size: 16px; 
-               font-weight: 500;
-               line-height: 32px;   
-               font-style: normal;  
-               text-align: left;
-              // padding-top: 40px;
-          //     padding-bottom: 40px;
-               padding-left: 10px;
-               padding-right: 10px;
-               color: #f94d1c;
 
-               
-               @media (min-width: 768px) {
-                font-size: 16px;
-                padding-left: 0;
-                padding-right: 0;
-              }
-            }
 
             a {
                 margin-right: 0px;
@@ -650,28 +845,40 @@ header {
                   }
             }
 
-        }
-
-        img {
-          //  display: none;
-           // margin-right: -50px;
-           // width: 50%;
-           // height: 50%; 
-           object-fit: cover;
-           object-position: bottom;           
-
-            @media (min-width: 1200px) {
-                display: block;
-                width: 533px;
-                height: 615px;
+            .btn-black {
+                background-color: #191919;
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+                text-decoration: none;
+                padding: 12px 30px;
+                font-weight: 16px;
+                border-radius: 25px; // Runda hörn
+            
+                i {
+                    margin-left: 8px;
+                    font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+                }
+            
+                &:hover {
+                    background-color: #1f442b;
+                    border: 1px solid #191919;
+                    color: #191919;
+                }
+            
             }
-        
+
+
+
         }
+
+
 
     }
 }
 
-.project-and-case { // 5) Project and cases section
+
+// 7) Project and cases section
+.project-and-case { 
     .container {
 
         .section-title {
