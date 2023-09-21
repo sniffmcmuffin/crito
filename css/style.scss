@@ -80,19 +80,17 @@ html, bopdy {
     border: 1px solid #191919;
     color: #191919;
     text-decoration: none;
-   // padding: 6px 10px;
+    // padding: 6px 10px;
     font-weight: 16px;
     border-radius: 50px; // Runda hörn
     padding: 12px;
-    text-align: center; 
+    text-align: center;
     align-items: center; // Lite kaka på kaka, men får funka för nu.
     text-decoration: none;
     display: inline-block;
-  //    font-size: 16px;
+    //    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  
-
 
     i {
         margin-left: 8px;
@@ -104,7 +102,35 @@ html, bopdy {
         border: 1px solid #FFFFFF;
         color: #FFFFFF;
     }
+}
 
+.btn-round-black {
+    background-color: #191919;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+    // padding: 6px 10px;
+    font-weight: 16px;
+    border-radius: 50px; // Runda hörn
+    padding: 12px;
+    text-align: center;
+    align-items: center; // Lite kaka på kaka, men får funka för nu.
+    text-decoration: none;
+    display: inline-block;
+    //    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    i {
+        margin-left: 8px;
+        font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+    }
+
+    &:hover {
+        background-color: #FFFFFF;
+        border: 1px solid #191919;
+        color: #191919;
+    }
 }
 
 .section-title {
@@ -764,114 +790,83 @@ header {
         display: flex;
         flex-direction: column; 
         justify-content: space-between;
-     //   align-items: left;
-
-        padding-top: 100px;
-        padding-bottom: 40px;
-      //  text-align: left;
+     //   padding-top: 100px;
+        padding-bottom: 125px;
         
         // @media (min-width: 1200px) {
         //     text-align: left;
         // }
  
-       #p-2 {
-        font-family: 'Inter', sans-serif;
-        font-size: 18px; 
-        font-weight: 500;
-        line-height: 32px;   
-        font-style: normal;  
-
-        color: #f94d1c;
-
-        
-     //    @media (min-width: 768px) {
-     //     font-size: 16px;
-     //     padding-left: 0;
-     //     padding-right: 0;
-     //   }
-     }
-
         .services {      
-            display: grid;
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            flex-direction: row;
+            gap: 2rem;
 
-           // display:flex;
-           
-            h2 { 
-              font-family: 'DM Sans', sans-serif;
-              font-weight: 700;
-              font-size: 45px;
-              line-height: 54px;
-              font-style: normal;
-              padding-top: 4px; // Finlir för mellanrum mellan p2 och h2. Hitta bättre sätt.
-              padding-bottom: 10px;
-            //  text-align: left;
-              color: #191919;
-             // text-align: center;
+            .line-short {
+                margin-top: 0.1rem; // Nästam
+                border-top: solid 1px black;
+                height: 1px;
+                width: 20%;
             }
 
-            p { // Väljer att inte ha ljusgrå text för att det försvårar läsbarheten.
-                font-family: 'Inter', sans-serif;
-                font-size: 16px; 
-                font-weight: 500;
-                line-height: 32px;   
-                font-style: normal;  
-                       // letter-spacing: 0.3em;
-              //  text-align: left;
-              //  letter-spacing: -10px;
-                color: rgba(25,25,25,0.7 ); 
-                padding-bottom: 50px;
-              //  text-align: left;
-          //      padding-top: 40px;
-              //  padding-bottom: 40px;
-               // padding-left: 10px;
-               // padding-right: 10px;
-             //   @media (min-width: 768px) {
-              //   font-size: 16px;
-              //   padding-left: 0;
-              //   padding-right: 0;
-              // }
-             }
+            .box {
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+             background-color: white;
+             border: solid 1px black;
+             padding: 3rem 2rem;
+             justify-content: space-between;
+            }
 
+            .box-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #f9d783;
+                border: solid 1px black;
+                padding: 3rem 2rem;
+                justify-content: space-between;
+               }
 
+            h3 {
+                padding-top: 30px;
+                color: #191919;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 22px;    
+                font-weight: bold;
+                line-height: 33px;
+            }
 
-            a {
-                margin-right: 0px;
+            .circle-hack {
+                display: flex;
+                justify-content: end;
+                }
+        
+            .btn-round {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: en;
                 display: block;
-                margin-bottom: 20px;
-
-                @media (min-width: 768px) {
-                    display: inline-block;
-                    margin-right: 10px;
-                  }
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
             }
 
-            .btn-black {
-                background-color: #191919;
-                border: 1px solid #FFFFFF;
-                color: #FFFFFF;
-                text-decoration: none;
-                padding: 12px 30px;
-                font-weight: 16px;
-                border-radius: 25px; // Runda hörn
-            
-                i {
-                    margin-left: 8px;
-                    font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
-                }
-            
-                &:hover {
-                    background-color: #1f442b;
-                    border: 1px solid #191919;
-                    color: #191919;
-                }
-            
+            .btn-round-black {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: en;
+                display: block;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
             }
-
-
 
         }
-
-
 
     }
 }
