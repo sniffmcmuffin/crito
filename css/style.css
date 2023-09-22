@@ -626,6 +626,81 @@ header .container .menu .main-menu .btn-login {
   border-radius: 50%;
 }
 
+.choose-us {
+  display: flex;
+}
+.choose-us .container {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.choose-us .container .choose-left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25em;
+}
+.choose-us .container .choose-left h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 54px;
+  font-style: normal;
+  padding-top: 4px;
+  padding-bottom: 20px;
+  color: #191919;
+}
+.choose-us .container .choose-left p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  color: rgba(25, 25, 25, 0.7);
+}
+.choose-us .container .choose-left #p-2 {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  font-style: normal;
+  color: #f94d1c;
+}
+.choose-us .container .choose-left .down-content {
+  display: flex;
+  flex-direction: column;
+}
+.choose-us .container .choose-left .down-content .table {
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+}
+.choose-us .container .choose-left .down-content .table .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.choose-us .container .choose-right {
+  display: flex;
+  width: 33.3em;
+}
+.choose-us .container .image-1 {
+  width: 533px;
+  height: 615px;
+  position: relative;
+  right: 90px;
+  top: 120px;
+  z-index: 1;
+}
+.choose-us .container .image-2 {
+  width: 1057px;
+  height: 425px;
+  position: relative;
+  left: -735px;
+  top: 300px;
+}
+
 .project-and-case .container .section-title {
   text-align: center;
 }
