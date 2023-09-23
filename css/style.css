@@ -750,13 +750,16 @@ header .container .menu .main-menu .btn-login {
 }
 
 .meet-the-feebles {
-  background-color: #F0EFE9;
+  background-color: #f9d783;
 }
 .meet-the-feebles .container {
   display: flex;
   flex-direction: column;
+}
+.meet-the-feebles .container .right-content {
+  display: flex;
   justify-content: space-between;
-  padding-bottom: 125px;
+  align-items: center;
 }
 .meet-the-feebles .container .services {
   display: flex;
@@ -764,28 +767,11 @@ header .container .menu .main-menu .btn-login {
   flex-direction: row;
   gap: 2rem;
 }
-.meet-the-feebles .container .services .line-short {
-  margin-top: 0.1rem;
-  border-top: solid 1px black;
-  height: 1px;
-  width: 20%;
-}
 .meet-the-feebles .container .services .box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
-  border: solid 1px black;
-  padding: 3rem 2rem;
-  justify-content: space-between;
-}
-.meet-the-feebles .container .services .box-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: #f9d783;
-  border: solid 1px black;
-  padding: 3rem 2rem;
   justify-content: space-between;
 }
 .meet-the-feebles .container .services h3 {
@@ -796,27 +782,8 @@ header .container .menu .main-menu .btn-login {
   font-weight: bold;
   line-height: 33px;
 }
-.meet-the-feebles .container .services .circle-hack {
-  display: flex;
-  justify-content: end;
-}
-.meet-the-feebles .container .services .btn-round {
+.meet-the-feebles .container .center-content {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: en;
-  display: block;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-.meet-the-feebles .container .services .btn-round-black {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: en;
-  display: block;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  gap: 1em;
 }
