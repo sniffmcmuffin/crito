@@ -868,6 +868,12 @@ header {
 
         }
 
+        // .center-content {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: baseline;
+        // }
+
     }
 }
 
@@ -1088,5 +1094,94 @@ header {
             justify-content: center;
             gap: 1em;
            }
+    }
+}
+
+// 9) Testimonials
+.testimonials {  
+    background-color: #F0EFE9;
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+     //   padding-top: 100px;
+        padding-bottom: 125px;
+        
+        // @media (min-width: 1200px) {
+        //     text-align: left;
+        // }
+ 
+        .services {      
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            flex-direction: row;
+            gap: 2rem;
+
+            .line-short {
+                margin-top: 0.1rem; // Nästam
+                border-top: solid 1px black;
+                height: 1px;
+                width: 20%;
+            }
+
+            .box {
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+             background-color: white;
+             border: solid 1px black;
+             padding: 3rem 2rem;
+             justify-content: space-between;
+            }
+
+            .box-2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #f9d783;
+                border: solid 1px black;
+                padding: 3rem 2rem;
+                justify-content: space-between;
+               }
+
+            h3 {
+                padding-top: 30px;
+                color: #191919;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 22px;    
+                font-weight: bold;
+                line-height: 33px;
+            }
+
+            .circle-hack {
+                display: flex;
+                justify-content: end;
+                }
+        
+            .btn-round {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: en;
+                display: block;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+            }
+
+            .btn-round-black {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: en;
+                display: block;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+            }
+
+        }
+
     }
 }

@@ -787,3 +787,75 @@ header .container .menu .main-menu .btn-login {
   justify-content: center;
   gap: 1em;
 }
+
+.testimonials {
+  background-color: #F0EFE9;
+}
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 125px;
+}
+.testimonials .container .services {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-direction: row;
+  gap: 2rem;
+}
+.testimonials .container .services .line-short {
+  margin-top: 0.1rem;
+  border-top: solid 1px black;
+  height: 1px;
+  width: 20%;
+}
+.testimonials .container .services .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border: solid 1px black;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+}
+.testimonials .container .services .box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9d783;
+  border: solid 1px black;
+  padding: 3rem 2rem;
+  justify-content: space-between;
+}
+.testimonials .container .services h3 {
+  padding-top: 30px;
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 33px;
+}
+.testimonials .container .services .circle-hack {
+  display: flex;
+  justify-content: end;
+}
+.testimonials .container .services .btn-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: en;
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.testimonials .container .services .btn-round-black {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: en;
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
