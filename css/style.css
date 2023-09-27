@@ -928,3 +928,21 @@ header .container .menu .main-menu .btn-login {
   padding-bottom: 60px;
   gap: 1em;
 }
+
+.signup {
+  background-color: #F0EFE9;
+}
+.signup .container {
+  display: flex;
+}
+.signup .container .content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.signup .container .content h2 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+}
