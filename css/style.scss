@@ -1087,11 +1087,22 @@ header {
                 font-weight: bold;
                 line-height: 33px;
             }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                font-style: normal;
+                text-align: left;
+           
+                color: #f94d1c;
+            }
         }
 
         .center-content {
             display: flex;
             justify-content: center;
+       
             gap: 1em;
            }
     }
@@ -1099,22 +1110,30 @@ header {
 
 // 9) Testimonials
 .testimonials {  
-    background-color: #F0EFE9;
+    
+    background-color: #f9d783;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .container {
         display: flex;
         flex-direction: column; 
         justify-content: space-between;
      //   padding-top: 100px;
+     background-color: #FFFFFF;
         padding-bottom: 125px;
         
         // @media (min-width: 1200px) {
         //     text-align: left;
         // }
+
+        .section-title {
+            text-align: center;
+        }
  
         .services {      
             display: flex;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             flex-direction: row;
             gap: 2rem;
 
@@ -1130,20 +1149,25 @@ header {
              flex-direction: column;
              justify-content: space-between;
              background-color: white;
-             border: solid 1px black;
+            // border: solid 1px black;
              padding: 3rem 2rem;
              justify-content: space-between;
+
+             .table {
+
+                gap: 2rem;
+                justify-content: start;
+                align-items: center;
+
+                .icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                }
             }
 
-            .box-2 {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                background-color: #f9d783;
-                border: solid 1px black;
-                padding: 3rem 2rem;
-                justify-content: space-between;
-               }
+            }
 
             h3 {
                 padding-top: 30px;
@@ -1183,5 +1207,71 @@ header {
 
         }
 
+    }
+}
+
+// 10) Article & News
+.article-news {  
+    background-color: #FFFFFF;
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+
+        .section-title {
+            padding-bottom: 40px;
+         }
+        
+        .right-content { // Jobbigt lätt lösning till slut. 
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+        }
+       
+        .services {      
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr;
+            flex-direction: row;
+            gap: 2rem;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #FFFFFF;
+
+                .image {
+                    position: relative;
+                    bottom: 210px;
+                    right: -20px;
+                }
+                }
+
+            h3 {
+                padding-top: 30px;
+                color: #191919;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 22px;    
+                font-weight: bold;
+                line-height: 33px;
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                font-style: normal;
+                text-align: left;
+           
+              //  color: #f94d1c;
+            }
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 60px;
+            gap: 1em;
+           }
     }
 }
