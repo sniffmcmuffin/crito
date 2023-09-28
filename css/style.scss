@@ -183,8 +183,8 @@ header {
         } 
 
         .menu {
-            display:none;
-            flex: 1; // FÖr att få det gå hela vägen till loggan.
+            display: none;
+            flex: 1; 
 
             @media (min-width: 992px) {
                 display: block;
@@ -193,7 +193,7 @@ header {
             .top-menu {
                 display: flex;
                 justify-content: flex-end;
-                align-items: center; // Samma skäl som i .contact-information nedan.
+                align-items: center; 
                 padding-bottom: 10px;
                 border-bottom: 1px solid #DAD9D3;
 
@@ -201,12 +201,11 @@ header {
                     justify-content: space-between;
                 }
 
-                // Man kan tillfälligt lägga till borders för att se vart man grejar.
-                // border: 1px solid black;
+          
 
                 .contact-information {
                     display: none;
-                    align-items: center; // Gör så social media ikonerna ligger längs samma linje som kontaktinfo.
+                    align-items: center; 
 
                     @media (min-width: 1200px) {
                         display: flex;
@@ -255,7 +254,7 @@ header {
 
                 nav {
                     a {
-                        display: inline-block; // Pga att a länk är inline object.
+                        display: inline-block; 
                         color: #191919;
                         text-decoration: none;
                         margin-right: 35px;
@@ -1318,5 +1317,46 @@ header {
 }
 
 footer {
+
+    background: #0e1021;
+
+    .container {
+
+        .services {      
+            display: flex;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            flex-direction: row;
+            gap: 2rem;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: #f9d783;
+                justify-content: space-between;
+               }
+
+            h3 {
+                padding-top: 30px;
+                color: #191919;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 22px;    
+                font-weight: bold;
+                line-height: 33px;
+            }
+
+            p {
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                font-style: normal;
+                text-align: left;
+           
+                color: #f94d1c;
+            }
+
+
+    }
   
+}
 }

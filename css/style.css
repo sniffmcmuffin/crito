@@ -946,3 +946,36 @@ header .container .menu .main-menu .btn-login {
   font-weight: 700;
   font-size: 44px;
 }
+
+footer {
+  background: #0e1021;
+}
+footer .container .services {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex-direction: row;
+  gap: 2rem;
+}
+footer .container .services .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9d783;
+  justify-content: space-between;
+}
+footer .container .services h3 {
+  padding-top: 30px;
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 33px;
+}
+footer .container .services p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: normal;
+  text-align: left;
+  color: #f94d1c;
+}
