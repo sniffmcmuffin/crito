@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600:700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
 
 html, bopdy {
@@ -7,6 +7,7 @@ html, bopdy {
     font-size: 16px;
     font-weight: 400;
 }
+
 
 // Knappar
 .btn-yellow {
@@ -294,11 +295,23 @@ header {
 // 1) Showcase section
 .showcase { 
     background-color: #F0EFE9;
+    padding-bottom: 100px;;
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        img.background-lines {
+            position: relative;
+            bottom: -41em;
+            right: 300px;     
+        }
+
+        img.tablet-guy {
+            position: relative;
+            bottom: -8.7em;
+        }
 
         .content { 
             padding-top: 40px;
@@ -313,8 +326,7 @@ header {
               font-family: 'DM Sans', sans-serif;
               font-weight: 700;
               font-size: 40px;
-             // text-align: center;
-
+         
               @media (min-width: 768px) {
                 font-size: 70px;
               }
@@ -346,9 +358,8 @@ header {
                 @media (min-width: 768px) {
                     display: inline-block;
                     margin-right: 10px;
-                  }
+                }
             }
-
         }
 
         img {
@@ -366,49 +377,44 @@ header {
 }
 
 // 2) Logotype section
-.grid-1 { // 2) Logotype section
-
+.grid-1 { 
+    
     .parent {
         display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr; // Fractions, antal fr lika med antal kolumner. // rpeat( 2, 1fr) om man vill ha 2, etc
-        object-fit: cover;
-        object-position: bottom;
-
-        //justify-content: space-between;
-        // align-items: center;
-        // height: 100vh; // Viewport height
-
-        .child { // Se till att bilderna funkar alla skärmar i responsivt.
-            padding: 20px;
-            justify-content: space-evenly;
-              
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding-left: 70px;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        grid-column-gap: 3em;
+  
+        .child { 
+          align-items: center;       
         }
     }
 }
 
 // 3) Trusted companies section
 .trusted-companies { 
-    // Flytta upp financial advice och risk mamangement lite. Alternastivt byt til 1 col + 2x2 row/col
+  
     .container {
+
+        padding-top: 60px;
 
         .grid-container {
             display: grid;
-            // grid-gap: 30px;
-            grid-template-columns: 35% auto auto;
+            grid-template-columns: 1.35fr 1fr 1fr;
             gap: 2rem 5rem;
-        }
+            }
 
         .grid-item {
 
             .btn-yellow {
-
                 background-color: #F9D783;
                 border: 1px solid #F9D783;
                 color: #191919;
                 text-decoration: none;
-                text-align: center; // Lista ut hur flytta ner textem lite lite jämfört med mallen.
-                padding: 12px 170px; // Kolla så den matchar i kanterna med grid ovan med en border.
+                text-align: center; 
+                padding: 12px 170px; 
                 font-family: 'Inter', sans-serif;
                 font-weight: 16px;
                 font-size: 16px;
@@ -417,7 +423,7 @@ header {
 
                 i {
                     margin-left: 8px;
-                    font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+                    font-size: 0.9em; 
                 }
 
                 &:hover {
@@ -425,15 +431,7 @@ header {
                     border: 1px solid #191919;
                     color: #F0EFE9;
                 }
-
             }
-
-            // h2 {
-            //     font-family: 'DM Sans', sans-serif;
-            //     font-weight: 700;
-            //     font-size: 22px; 
-            //     color:#F9D783;
-            // }
 
             h2 {
                 font-family: 'DM Sans', sans-serif;
@@ -454,7 +452,7 @@ header {
         }
 
         .grid-item-2 {
-            padding-top: 60px;
+         
             padding-left: 40px;
             padding-right: 40px;
 
@@ -469,7 +467,6 @@ header {
                 font-weight: 500;
                 font-size: 16px;
             }
-
         }
 
         .section-title {
@@ -478,147 +475,10 @@ header {
 
         }
 
-        // .thousand-companies { RADERA NÄR SÄKERSTÄLLT DET EJ ANVÄNDS
-        //    display: flex;
-
-        //     @media (min-width: 768px) {
-        //          grid-template-columns: 1fr 1fr; 
-        //     }          
-
-
-
-        //         img {
-        //             width: 100%;
-        //             height: auto;
-        //         }
-
-        //         h3 {
-        //             font-family: 'DM Sans', sans-serif;
-        //             font-weight: 700;
-        //             font-size: 22px; 
-
-        //         //    padding-top: 35px;
-        //         //    padding-bottom: 16;
-        //             border-bottom: 1px solid #DAD9D3;
-        //         }
-
-        //         h2 {
-        //             font-family: 'DM Sans', sans-serif;
-        //             font-weight: 700;
-        //             font-size: 45px; 
-        //          //   padding-top: 35px;
-        //          //   padding-bottom: 16;
-
-        //         }
-
-        //         p {
-        //             font-family: 'Inter', sans-serif;
-        //             font-weight: 500;
-        //             font-size: 16px; 
-        //           //  padding-top: 35px;
-        //           //  padding-bottom: 16;
-        //           //   border-bottom: 1px solid #b8b50e;
-        //         }
-
-
-        //         a { // Få den växla till svart när man för musen över.
-        //             padding: 15px; 
-        //             display: block; // För det är inline.
-        //             text-align: right;
-        //             font-family: 'Inter', sans-serif;
-        //             font-size: 14px;
-        //             font-weight: 500;
-        //             text-decoration: none;
-        //             color: #191919;
-
-        //             i {
-        //                 margin-left: 3px;
-        //             }
-
-        //         }
-        //     }
-        // }
-
+ 
         i {
             margin-bottom: 20px;
         }
-
-        // .center-content { VAD HADE JAG DETTA TILL?
-        //     margin-top: 50px;
-        //     margin-bottom: 90px;
-        //  }
-    }
-
-.consulting-credits {
-    background-color: #F0EFE9;
-    
-    .consulting-credits {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    
-        .content { 
-            padding-top: 40px;
-            padding-bottom: 40px;
-            text-align: center;
-                
-            @media (min-width: 1200px) {
-                text-align: left;
-            }
-    
-            h1 { 
-                font-family: 'DM Sans', sans-serif;
-                font-weight: 700;
-                font-size: 40px;
-        
-                @media (min-width: 768px) {
-                    font-size: 70px;
-                  }
-    
-                @media (min-width: 1400px) {
-                    font-size: 86px;
-                }
-            }
-    
-            p {
-                font-size: 18px; 
-                padding-top: 40px;
-                padding-bottom: 40px;
-                padding-left: 10px;
-                padding-right: 10px;
-                  
-                @media (min-width: 768px) {
-                    font-size: 20px;
-                    padding-left: 0;
-                    padding-right: 0;
-                  }
-                }
-    
-            a {
-                margin-right: 0px;
-                display: block;
-                margin-bottom: 20px;
-  
-                @media (min-width: 768px) {
-                    display: inline-block;
-                    margin-right: 10px;
-                    }
-                }
-    
-            }
-    
-            img {
-                display: none;
-                margin-right: -50px;
-    
-                @media (min-width: 1200px) {
-                    display: block;
-                }
-            
-            }
-    
-        }
-    
     }
 }
 
@@ -629,27 +489,13 @@ header {
     .container {
         display: flex;
         flex-direction: row;
-        //  gap: 10px 20px;
         justify-content: space-between;
         margin-top: 200px;
-        //  justify-content: center;
-
-        //  justify-content: space-between;
-        // align-items: center;
-
+       
         .about-company-left {
             margin-left: 50px;
             width: 33.3em;
-            //   position: relative;
-            //  left: 25px;
-
-
-            //  padding-top: 40px;
-            //     padding-left: 50px;
-            //    margin-left: 50px;;
-            //  padding-bottom: 40px;
-            // text-align: center;
-
+       
             //       @media (min-width: 1200px) {
             //          text-align: left;
 
@@ -677,9 +523,7 @@ header {
             width: 33.3em;
             text-align: left;
             padding-left: 10px;
-            // display:flex;
-
-
+           
             .bad-hack {
                 // Hitta bättre sätt få upp Intro Video 
                 display: flex;
@@ -691,11 +535,9 @@ header {
                 font-size: 45px;
                 line-height: 54px;
                 font-style: normal;
-                padding-top: 4px; // Finlir för mellanrum mellan p2 och h2. Hitta bättre sätt.
+                padding-top: 4px; 
                 padding-bottom: 10px;
-                //  text-align: left;
                 color: #191919;
-                // text-align: center;
             }
 
             p {
@@ -705,16 +547,9 @@ header {
                 font-weight: 500;
                 line-height: 32px;
                 font-style: normal;
-                // letter-spacing: 0.3em;
-                //  text-align: left;
-                //  letter-spacing: -10px;
                 color: rgba(25, 25, 25, 0.7);
                 padding-bottom: 50px;
-                //  text-align: left;
-                //      padding-top: 40px;
-                //  padding-bottom: 40px;
-                // padding-left: 10px;
-                // padding-right: 10px;
+               
                 //   @media (min-width: 768px) {
                 //   font-size: 16px;
                 //   padding-left: 0;
@@ -728,13 +563,7 @@ header {
                 font-weight: 500;
                 line-height: 32px;
                 font-style: normal;
-                //   text-align: left;
-                // padding-top: 40px;
-                //     padding-bottom: 40px;
-                //  padding-left: 10px;
-                // padding-right: 10px;
                 color: #f94d1c;
-
 
                 //    @media (min-width: 768px) {
                 //     font-size: 16px;
@@ -761,11 +590,11 @@ header {
                 text-decoration: none;
                 padding: 12px 30px;
                 font-weight: 16px;
-                border-radius: 25px; // Runda hörn
+                border-radius: 25px; 
 
                 i {
                     margin-left: 8px;
-                    font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+                    font-size: 0.9em; 
                 }
 
                 &:hover {
@@ -1075,7 +904,7 @@ header {
                 flex-direction: column;
                 justify-content: space-between;
                 background-color: #f9d783;
-                justify-content: space-between;
+            
                }
 
             h3 {
@@ -1281,6 +1110,8 @@ header {
 
     .container {
         display: flex;
+        justify-content: space-between; 
+        align-items: center;
 
 
         .content { 
@@ -1288,8 +1119,12 @@ header {
             flex-direction: row;
             padding-top: 60px;
             padding-bottom: 60px;
-   
 
+           
+            grid-template-columns: 2fr 1fr 1fr;
+           
+            gap: 2rem;
+           
             // @media (min-width: 1200px) {
             //     text-align: left;
             //     justify-content: space-between;
@@ -1318,45 +1153,112 @@ header {
 
 footer {
 
-    background: #0e1021;
+    background-color: #0e1021;
+    text-align: center;;
 
     .container {
-
-        .services {      
+        
+        .logga {
             display: flex;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            flex-direction: row;
-            gap: 2rem;
+            align-items: left;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 1em;
+            padding-bottom: 2em;
+            padding-right: 6em;
 
-            .box {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                background-color: #f9d783;
-                justify-content: space-between;
-               }
 
-            h3 {
-                padding-top: 30px;
-                color: #191919;
-                font-family: 'DM Sans', sans-serif;
-                font-size: 22px;    
-                font-weight: bold;
-                line-height: 33px;
+            img {
+                width: 50%;
+               
             }
 
-            p {
-                font-family: 'Inter', sans-serif;
-                font-weight: 500;
-                font-size: 18px;
-                font-style: normal;
-                text-align: left;
+            
+        }
+
+        .spacing {
+            line-height: 2.8;
+            gap: 6em;
+        }
+
+        h3 {
+            padding-top: 30px;
+            color: #ffffff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 22;    
+            // font-weight: 500;
+            line-height: 33px;
+        }
+
+        p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            font-style: normal;
+            text-align: left;
+            color: #ffffffb3;
            
-                color: #f94d1c;
+          
+       
+          //  color: #f94d1c;
+        }
+
+        a {
+            display: inline-block; 
+            color: #ffffffb3;
+            text-decoration: none;
+            margin-right: 35px;
+            position: relative;
+
+            &.active {
+                font-weight: 500;
             }
 
+            &.active::after,
+            &:hover::after {
+                content: '';
+                position: absolute;
+                font-weight: 500;
+                height: 2px;
+                width: 15px;
+                background-color: #ffffff;
+                left: 50%;
+                bottom: -3px;
+                transform: translate((calc(50% - 15px))); // Läs på
+            }
 
+        }
+
+
+    
+        .bottom-footer {
+
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+           
+        
+         
+
+            .social-media {
+                a {
+                    color: #ffffff;
+                    font-size: 1em;
+                    margin-left: 10x;
+
+                    &:hover {
+                        color: #7c7c7c;
+                    }
+                }
+
+            }
+        }
+       
     }
-  
-}
+
+    .streck {
+        border-top: 1px solid #DAD9D3;
+        padding-bottom: 2em;
+        color: #ffffffb3;
+    }
 }
