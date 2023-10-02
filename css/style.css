@@ -410,6 +410,7 @@ header .container .menu .main-menu .btn-login {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 200px;
+  margin-bottom: -100px;
 }
 .about-company .container .about-company-left {
   margin-left: 50px;
@@ -500,12 +501,16 @@ header .container .menu .main-menu .btn-login {
 
 .our-services {
   background-color: #F0EFE9;
+  margin: 0;
+}
+.our-services img.background-lines2 {
+  position: relative;
+  left: 72em;
 }
 .our-services .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 125px;
 }
 .our-services .container .services {
   display: flex;
@@ -571,6 +576,7 @@ header .container .menu .main-menu .btn-login {
 }
 
 .choose-us {
+  height: 630px;
   display: flex;
 }
 .choose-us .container {
@@ -645,6 +651,9 @@ header .container .menu .main-menu .btn-login {
   top: 300px;
 }
 
+.project-and-case {
+  margin-top: 120px;
+}
 .project-and-case .container .section-title {
   text-align: center;
 }
