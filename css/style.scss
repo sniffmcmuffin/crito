@@ -39,11 +39,11 @@ html, bopdy {
     text-decoration: none;
     padding: 12px 30px;
     font-weight: 16px;
-    border-radius: 25px; // Runda hörn
+    border-radius: 25px; 
 
     i {
         margin-left: 8px;
-        font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+        font-size: 0.9em; 
     }
 
     &:hover {
@@ -81,21 +81,24 @@ html, bopdy {
     border: 1px solid #191919;
     color: #191919;
     text-decoration: none;
-    // padding: 6px 10px;
     font-weight: 16px;
-    border-radius: 50px; // Runda hörn
+    border-radius: 50px; 
     padding: 12px;
     text-align: center;
     align-items: center; // Lite kaka på kaka, men får funka för nu.
     text-decoration: none;
     display: inline-block;
-    //    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
 
     i {
         margin-left: 8px;
         font-size: 0.9em; // Detta skalar ner storleken jämfört med -btn-yellow på 16px.
+
+        // @media (max-width: 992px) {
+        //     font-size: 0.5em;;
+        // }
+
     }
 
     &:hover {
@@ -381,17 +384,38 @@ header {
     
     .parent {
         display: grid; 
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        padding-left: 70px;
+        grid-template-columns: auto auto auto auto auto;
         padding-top: 3em;
         padding-bottom: 3em;
-        grid-column-gap: 3em;
-  
+         
+        @media (max-width: 576px) {
+            display: none;
+            }
+
+        @media (max-width: 768px) {
+            display:grid;
+            grid-template-columns: auto auto auto auto auto;   
+            padding-top: 30px;
+          
+            img {
+                height: 40px;
+                }
+        }
+       
+        @media (max-width: 992px) {
+            display:grid;
+            grid-template-columns: auto auto auto auto auto;   
+      
+            img {
+                height: 50px;
+            }
+        }
+       
         .child { 
-          align-items: center;       
+          align-items: center;     
+           }
         }
     }
-}
 
 // 3) Trusted companies section
 .trusted-companies { 
@@ -404,11 +428,26 @@ header {
             display: grid;
             grid-template-columns: 1.35fr 1fr 1fr;
             gap: 2rem 5rem;
+
+            @media (max-width: 992px) {
+                display: flex;
+                flex-direction: column;
+            }    
+         
+            @media (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+            }
+           
+            @media (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                }
             }
 
         .grid-item {
-
-            .btn-yellow {
+                           // Det hade varit trevligt att få knappen att vara i slutet av sektionen
+            .btn-yellow {  // med mindre skärm, men får lösa det senare.
                 background-color: #F9D783;
                 border: 1px solid #F9D783;
                 color: #191919;
@@ -420,6 +459,10 @@ header {
                 font-size: 16px;
                 border-radius: 25px;
 
+                @media (max-width: 992px) {
+                    padding: 12px 70px; 
+                }
+    
 
                 i {
                     margin-left: 8px;
@@ -452,7 +495,6 @@ header {
         }
 
         .grid-item-2 {
-         
             padding-left: 40px;
             padding-right: 40px;
 
@@ -495,9 +537,10 @@ header {
         .about-company-left {
             margin-left: 50px;
             width: 33.3em;
-       
-            //       @media (min-width: 1200px) {
-            //          text-align: left;
+ 
+            @media (max-width: 992px) {
+                display: none;
+            }
 
             .image-1 {
                 object-fit: cover;
@@ -524,6 +567,12 @@ header {
            
             .bad-hack {
                display: flex;
+
+               @media (max-width: 992px) {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 70px;
+               } 
             }
 
             h2 {
@@ -545,13 +594,13 @@ header {
                 line-height: 32px;
                 font-style: normal;
                 color: rgba(25, 25, 25, 0.7);
-                padding-bottom: 50px;
+                padding-bottom: 70px;
                
-                //   @media (min-width: 768px) {
-                //   font-size: 16px;
-                //   padding-left: 0;
-                //   padding-right: 0;
-                // }
+                  @media (min-width: 768px) {
+                  font-size: 16px;
+                  padding-left: 0;
+                  padding-right: 0;
+                }
             }
 
             #p-2 {
@@ -562,11 +611,11 @@ header {
                 font-style: normal;
                 color: #f94d1c;
 
-                //    @media (min-width: 768px) {
-                //     font-size: 16px;
-                //     padding-left: 0;
-                //     padding-right: 0;
-                //   }
+                   @media (min-width: 768px) {
+                    font-size: 16px;
+                    padding-left: 0;
+                    padding-right: 0;
+                  }
             }
 
             a {
@@ -599,40 +648,59 @@ header {
                     border: 1px solid #191919;
                     color: #191919;
                 }
-
             }
-
         }
-
     }
 }
 
 // 5) Our Services 
 .our-services {  
     background-color: #F0EFE9;
+    // height: 830px; // Blir för mycket grey space utan detta. Lista ut varför.
   
-    img.background-lines2 {
+    img.background-lines2 { 
         position: relative;
-        left: 72em;
-       }
+        left: 73em; 
+        
+        @media (max-width: 576px) { 
+            display: none;
+        }    
+        
+    }
 
     .container {
         display: flex;
         flex-direction: column; 
         justify-content: space-between;
-           
-        // @media (min-width: 1200px) {
-        //     text-align: left;
-        // }
 
+        @media (max-width: 1200px) { 
+            justify-content: center;
+        }
+ 
         .services {      
-            display: flex;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: grid;
+            grid-template-columns: auto;
             flex-direction: row;
             gap: 2rem;
 
+            @media (min-width: 576px) {
+                grid-template-columns: auto;
+                width: auto;
+            }
+    
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr;
+                width: 50%;
+            }
+
+            @media (min-width: 1200px) { 
+                grid-template-columns: auto auto auto auto;
+                width: 100%;
+                justify-content: center;
+            }
+     
             .line-short {
-                margin-top: 0.1rem; // Nästam
+                margin-top: 0.1rem; // Nästan
                 border-top: solid 1px black;
                 height: 1px;
                 width: 20%;
@@ -730,6 +798,14 @@ header {
                 padding-top: 4px; 
                 padding-bottom: 20px;
                 color: #191919;
+
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                }
+                
+                @media (max-width: 576px) {
+                    font-size: 18px; 
+                }
             }
 
             p {
@@ -772,11 +848,11 @@ header {
         .choose-right {
             display: flex;
             width: 33.3em;
-         //  position: relative;
+        
+            @media (max-width: 992px) {
+                display: none;
+            }
         }
-            // Använda sig av px för att flytta bilderna känns inte tryggt. Behöver antagligen använda
-            // em eller rem för att få det funka säkrast, speciellt med tanke på responsivt. 
-            // Just nu har jag inte liv kvar i mig till att omvandla så det får vara good enough.
             .image-1 {
                 width: 533px;
                 height: 615px;
@@ -784,19 +860,9 @@ header {
                 right: 90px;
                 top: 120px;
                 z-index: 1;
-          
-                // @media (min-width: 1200px) {
-                //     display: block;
-                //     width: 533px;
-                //     height: 615px;
-                // }
             }
 
             .image-2 {
-                //  transition-property: opacity; // 3 timmars google innan jag hittade på denna :[ .
-                                                  // Bara för att då inte få det funka med flytta bilden
-                                                  // så fick googla resten av kvällen tills jag listade ut det.
-      
                 width: 1057px;
                 height: 425px;
                 position: relative;
@@ -1088,6 +1154,13 @@ header {
 // 11) Signup
 .signup { 
     background-color: #F0EFE9;
+ //   height: 270px;
+
+   img.background-lines3 {
+        position: relative;
+        left: 110em;
+        bottom: 1em;
+   }
 
     .container {
         display: flex;
@@ -1097,8 +1170,8 @@ header {
         .content { 
             display: flex;
             flex-direction: row;
-            padding-top: 60px;
-            padding-bottom: 60px;
+           padding-top: 60px;
+         //   padding-bottom: 60px;
             grid-template-columns: 2fr 1fr 1fr;
             gap: 2rem;
            
@@ -1127,10 +1200,30 @@ header {
 footer {
 
     background-color: #0e1021;
-    text-align: center;;
+    text-align: center;
+    height: 513px;
+
+    .streck {
+        border-top: 1px solid #DAD9D3;
+        padding-bottom: 2em;
+        color: #ffffffb3;
+    }
+
+    img.background-lines4 {
+        position: relative;
+        left: 95em;
+        bottom: 13em;
+      
+    }
 
     .container {
-        
+
+        img.background-lines4 {
+            position: relative;
+            left: 110em;
+            bottom: 1em;
+       }
+               
         .logga {
             display: flex;
             align-items: left;
@@ -1140,13 +1233,9 @@ footer {
             padding-bottom: 2em;
             padding-right: 6em;
 
-
             img {
                 width: 50%;
-               
             }
-
-            
         }
 
         .spacing {
@@ -1170,9 +1259,6 @@ footer {
             font-style: normal;
             text-align: left;
             color: #ffffffb3;
-           
-          
-       
           //  color: #f94d1c;
         }
 
@@ -1201,17 +1287,12 @@ footer {
             }
 
         }
-
-
     
         .bottom-footer {
 
             display: flex;
             align-items: left;
             justify-content: space-between;
-           
-        
-         
 
             .social-media {
                 a {
@@ -1229,9 +1310,5 @@ footer {
        
     }
 
-    .streck {
-        border-top: 1px solid #DAD9D3;
-        padding-bottom: 2em;
-        color: #ffffffb3;
-    }
+
 }
