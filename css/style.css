@@ -8,6 +8,17 @@ html, bopdy {
 }
 
 @media (max-width: 576px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
   h3 {
     font-size: 18px;
   }
@@ -26,6 +37,7 @@ html, bopdy {
   padding: 12px 30px;
   font-weight: 16px;
   border-radius: 25px;
+  transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 .btn-yellow i {
   margin-left: 8px;
@@ -35,6 +47,7 @@ html, bopdy {
   background-color: #191919;
   border: 1px solid #191919;
   color: #F0EFE9;
+  cursor: pointer;
 }
 
 .btn-transparent {
@@ -45,6 +58,7 @@ html, bopdy {
   padding: 12px 30px;
   font-weight: 16px;
   border-radius: 25px;
+  transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 .btn-transparent i {
   margin-left: 8px;
@@ -64,6 +78,7 @@ html, bopdy {
   padding: 12px 30px;
   font-weight: 16px;
   border-radius: 25px;
+  transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 .btn-black i {
   margin-left: 8px;
@@ -89,6 +104,7 @@ html, bopdy {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 .btn-round i {
   margin-left: 8px;
@@ -114,6 +130,7 @@ html, bopdy {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.5s ease-in-out;
 }
 .btn-round-black i {
   margin-left: 8px;
@@ -349,7 +366,7 @@ header .container .menu .main-menu .btn-login {
 @media (max-width: 768px) {
   .grid-1 .parent {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto;
     padding-top: 30px;
   }
   .grid-1 .parent img {
@@ -359,7 +376,7 @@ header .container .menu .main-menu .btn-login {
 @media (max-width: 992px) {
   .grid-1 .parent {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto;
   }
   .grid-1 .parent img {
     height: 50px;
@@ -687,11 +704,11 @@ header .container .menu .main-menu .btn-login {
 }
 
 .choose-us {
-  height: 630px;
   display: flex;
 }
 .choose-us .container {
   display: flex;
+  flex-wrap: wrap;
   grid-template-columns: 1fr 1fr;
   flex-direction: row;
   justify-content: space-between;
@@ -700,6 +717,11 @@ header .container .menu .main-menu .btn-login {
   display: flex;
   flex-wrap: wrap;
   width: 25em;
+}
+@media (max-width: 992px) {
+  .choose-us .container .choose-left {
+    width: auto;
+  }
 }
 .choose-us .container .choose-left h2 {
   font-family: "DM Sans", sans-serif;
@@ -711,14 +733,14 @@ header .container .menu .main-menu .btn-login {
   padding-bottom: 20px;
   color: #191919;
 }
-@media (max-width: 768px) {
-  .choose-us .container .choose-left h2 {
-    font-size: 20px;
-  }
-}
 @media (max-width: 576px) {
   .choose-us .container .choose-left h2 {
     font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .choose-us .container .choose-left h2 {
+    font-size: 20px;
   }
 }
 .choose-us .container .choose-left p {
@@ -968,6 +990,11 @@ header .container .menu .main-menu .btn-login {
 @media (max-width: 576px) {
   .testimonials .container .services .box {
     flex-basis: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .testimonials .container .services .box .center-content {
+    display: none;
   }
 }
 .testimonials .container .services .box .table {
