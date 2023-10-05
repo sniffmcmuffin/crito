@@ -28,6 +28,32 @@ h3 {
     }
 }
 
+nav {
+    a {
+        display: inline-block; 
+        color: #191919;
+        text-decoration: none;
+        margin-right: 35px;
+        position: relative;
+
+        &.active {
+            font-weight: 500;
+        }
+
+        &.active::after,
+        &:hover::after {
+            content: '';
+            position: absolute;
+            font-weight: 500;
+            height: 2px;
+            width: 15px;
+            background-color: #191919;
+            left: 50%;
+            bottom: -3px;
+            transform: translate((calc(50% - 15px))); // Läs på
+        }
+    }
+}
 
 // Knappar
 .btn-yellow {
@@ -51,7 +77,6 @@ h3 {
         color: #F0EFE9;
         cursor: pointer;
     }
-
 }
 
 .btn-transparent {
@@ -74,7 +99,6 @@ h3 {
         border: 1px solid #191919;
         color: #F0EFE9;
     }
-
 }
 
 .btn-black {
@@ -97,7 +121,6 @@ h3 {
         border: 1px solid #191919;
         color: #191919;
     }
-
 }
 
 .btn-round {
@@ -224,8 +247,6 @@ header {
                     justify-content: space-between;
                 }
 
-          
-
                 .contact-information {
                     display: none;
                     align-items: center; 
@@ -251,7 +272,6 @@ header {
                             border: none;
                         }
                     }
-
                 }
 
                 .social-media {
@@ -275,33 +295,34 @@ header {
                 align-items: center;
                 padding-top: 10px;
 
-                nav {
-                    a {
-                        display: inline-block; 
-                        color: #191919;
-                        text-decoration: none;
-                        margin-right: 35px;
-                        position: relative;
+                // Dubbelkolla att det funkar att flytta detta ut ur main-meny och lägg överst så att andra klaser kan nyttja koden.
+                // nav {
+                //     a {
+                //         display: inline-block; 
+                //         color: #191919;
+                //         text-decoration: none;
+                //         margin-right: 35px;
+                //         position: relative;
 
-                        &.active {
-                            font-weight: 500;
-                        }
+                //         &.active {
+                //             font-weight: 500;
+                //         }
 
-                        &.active::after,
-                        &:hover::after {
-                            content: '';
-                            position: absolute;
-                            font-weight: 500;
-                            height: 2px;
-                            width: 15px;
-                            background-color: #191919;
-                            left: 50%;
-                            bottom: -3px;
-                            transform: translate((calc(50% - 15px))); // Läs på
-                        }
+                //         &.active::after,
+                //         &:hover::after {
+                //             content: '';
+                //             position: absolute;
+                //             font-weight: 500;
+                //             height: 2px;
+                //             width: 15px;
+                //             background-color: #191919;
+                //             left: 50%;
+                //             bottom: -3px;
+                //             transform: translate((calc(50% - 15px))); // Läs på
+                //         }
 
-                    }
-                } 
+                //     }
+                // } 
 
                 .btn-login {
                     padding-top: 12px;
@@ -1086,15 +1107,22 @@ header {
         }
  
         .services {      
-            display: flex;
-            grid-template-columns: 1fr 1fr 1fr;
+           //  display: flex;
+            display: grid;
+           // grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             flex-direction: row;
             gap: 2rem;
             
 
             @media (max-width: 992px) {
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
+                grid-template-columns: repeat(2, 1fr);
             }
+
+            @media (max-width: 576px) {
+                grid-template-columns: 1fr;
+              }
            
 
             .line-short {
@@ -1132,6 +1160,7 @@ header {
                 }
 
             .table {
+                display: flex;
                 gap: 2rem;
                 justify-content: start;
                 align-items: center;
@@ -1324,6 +1353,36 @@ header {
             }
         }
     }
+}
+
+// contact 1) connect
+.connect {
+    height: 300px;
+    display: flex;
+    background-color: #F0EFE9;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .lets-connect {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+        font-size: 56px;
+      }
+  //    height: 50vh;
+    }
+
+    img.bg-lines-contact {
+        position: relative;
+        bottom: 10px;
+        right: 540px; 
+      // left: 200px;    
+    }
+
 }
 
 footer {

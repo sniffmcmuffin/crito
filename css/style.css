@@ -29,6 +29,28 @@ html, bopdy {
   }
 }
 
+nav a {
+  display: inline-block;
+  color: #191919;
+  text-decoration: none;
+  margin-right: 35px;
+  position: relative;
+}
+nav a.active {
+  font-weight: 500;
+}
+nav a.active::after, nav a:hover::after {
+  content: "";
+  position: absolute;
+  font-weight: 500;
+  height: 2px;
+  width: 15px;
+  background-color: #191919;
+  left: 50%;
+  bottom: -3px;
+  transform: translate(calc(50% - 15px));
+}
+
 .btn-yellow {
   background-color: #F9D783;
   border: 1px solid #F9D783;
@@ -247,27 +269,6 @@ header .container .menu .main-menu {
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-}
-header .container .menu .main-menu nav a {
-  display: inline-block;
-  color: #191919;
-  text-decoration: none;
-  margin-right: 35px;
-  position: relative;
-}
-header .container .menu .main-menu nav a.active {
-  font-weight: 500;
-}
-header .container .menu .main-menu nav a.active::after, header .container .menu .main-menu nav a:hover::after {
-  content: "";
-  position: absolute;
-  font-weight: 500;
-  height: 2px;
-  width: 15px;
-  background-color: #191919;
-  left: 50%;
-  bottom: -3px;
-  transform: translate(calc(50% - 15px));
 }
 header .container .menu .main-menu .btn-login {
   padding-top: 12px;
@@ -952,14 +953,19 @@ header .container .menu .main-menu .btn-login {
   text-align: center;
 }
 .testimonials .container .services {
-  display: flex;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   flex-direction: row;
   gap: 2rem;
 }
 @media (max-width: 992px) {
   .testimonials .container .services {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .testimonials .container .services {
+    grid-template-columns: 1fr;
   }
 }
 .testimonials .container .services .line-short {
@@ -998,6 +1004,7 @@ header .container .menu .main-menu .btn-login {
   }
 }
 .testimonials .container .services .box .table {
+  display: flex;
   gap: 2rem;
   justify-content: start;
   align-items: center;
@@ -1169,6 +1176,29 @@ header .container .menu .main-menu .btn-login {
     font-size: 30px;
     text-align: center;
   }
+}
+
+.connect {
+  height: 300px;
+  display: flex;
+  background-color: #F0EFE9;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.connect .lets-connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.connect .lets-connect h1 {
+  font-size: 56px;
+}
+.connect img.bg-lines-contact {
+  position: relative;
+  bottom: 10px;
+  right: 540px;
 }
 
 footer {
