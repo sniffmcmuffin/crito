@@ -1260,6 +1260,28 @@ header .container .menu .main-menu .btn-login {
   line-height: 33px;
 }
 
+.message-form {
+  border: 1px solid #F94D1C;
+  display: flex;
+  flex-direction: column;
+}
+.message-form .container {
+  display: flex;
+}
+.message-form .container label {
+  display: block;
+  padding: 5px 0;
+}
+.message-form .container input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+.message-form .container textarea {
+  resize: none;
+  height: 200px;
+}
+
 footer {
   background-color: #0e1021;
   text-align: center;

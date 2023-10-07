@@ -1473,6 +1473,33 @@ header {
     }
 }
 
+// contact 3) Message form
+.message-form {
+    border: 1px solid #F94D1C;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+     display: flex;
+  
+        label {
+            display: block;
+            padding: 5px 0;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+        }
+
+        textarea { 
+            resize: none;
+            height: 200px;
+        }
+     }
+}
+
 footer {
 
     background-color: #0e1021;
