@@ -355,13 +355,14 @@ header {
         background: var(--f0efe9) url(images/background-lines.svg) left bottom no-repeat;
           bottom: 0;
         // right: 10em;  
-          // top: 100em;
+         // top: 100em;
+         bottom: 200px; // Alltså varje gång jag byter tillbaka till index.html fliken så har bilden flyttat sig! *grr*
           left: 0;
         }
 
         img.tablet-guy {
             position: relative;
-            bottom: -7.5em;
+           // bottom: 1.5em; Varför flytta den här på sig?!
         }
 
         .content { 
@@ -1395,87 +1396,48 @@ header {
 
 // contact 2) Contact-info
 .contact-info {
-
-   
-
+    
     .container {
-        background-color: #FFFFFF;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        flex-direction: row;
-        gap: 2rem;
+        grid-template-columns: auto auto auto;
+        gap: 2em;
+        padding-top: 3em;
 
-        .info {      
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background-color: white;
-            padding: 3rem 2rem;
-            justify-content: space-between;
-            flex: 1 1 33%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
 
-            @media (max-width: 992px) {
-               
-                grid-template-columns: repeat(2, 1fr);
-            }
 
-            @media (max-width: 576px) {
-                grid-template-columns: 1fr;
-              }
-         
-            .box {
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: space-between;
-                // background-color: white;
-                // padding: 3rem 2rem;
-                // justify-content: space-between;
-                // flex: 1 1 33%;
+      .bar {
+        display: flex;
+        flex-basis: 30%;
+        color: #191919;
+        border: 1px solid #191919;
+        border-radius: 5px;
+        padding: 25px;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+      }
+      
+      .icon {
+        font-size: x-large;
+        text-align: center;
+        width: 25%;
+        width: 25%;
+      }
+      
+      .text {
+        width: 100%;
+      }
+      
+  }
 
-                display: flex;
-                gap: 2rem;
-                justify-content: start;
-                align-items: center;
-
-                @media (max-width: 768px) {
-                    flex-basis: 50%;
-                }
-
-                @media (max-width: 576px) {
-                    flex-basis: 100%;
-                }
-
-            .table {
-                // display: flex;
-                // gap: 2rem;
-                // justify-content: start;
-                // align-items: center;
-                display: block;
-
-                .icon {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 50%;
-                }
-            }
-        }
-
-            h3 {
-                padding-top: 30px;
-                color: #191919;
-                font-family: 'DM Sans', sans-serif;
-                font-size: 22px;    
-                font-weight: bold;
-                line-height: 33px;
-            }
-        }
-    }
 }
 
 // contact 3) Message form
 .message-form {
-    border: 1px solid #F94D1C;
+    // border: 1px solid #F94D1C;
     display: flex;
     flex-direction: column;
 
@@ -1611,7 +1573,7 @@ footer {
             }
         }
        
-    }
+   }
 
 
 }

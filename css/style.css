@@ -287,11 +287,11 @@ header .container .menu .main-menu .btn-login {
   position: absolute;
   background: var(--f0efe9) url(images/background-lines.svg) left bottom no-repeat;
   bottom: 0;
+  bottom: 200px;
   left: 0;
 }
 .showcase .container img.tablet-guy {
   position: relative;
-  bottom: -7.5em;
 }
 .showcase .container .content {
   padding-bottom: 40px;
@@ -1201,67 +1201,33 @@ header .container .menu .main-menu .btn-login {
 }
 
 .contact-info .container {
-  background-color: #FFFFFF;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  flex-direction: row;
-  gap: 2rem;
+  grid-template-columns: auto auto auto;
+  gap: 2em;
+  padding-top: 3em;
 }
-.contact-info .container .info {
+.contact-info .container .bar {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  padding: 3rem 2rem;
-  justify-content: space-between;
-  flex: 1 1 33%;
-}
-@media (max-width: 992px) {
-  .contact-info .container .info {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .contact-info .container .info {
-    grid-template-columns: 1fr;
-  }
-}
-.contact-info .container .info .box {
-  display: flex;
-  gap: 2rem;
-  justify-content: start;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .contact-info .container .info .box {
-    flex-basis: 50%;
-  }
-}
-@media (max-width: 576px) {
-  .contact-info .container .info .box {
-    flex-basis: 100%;
-  }
-}
-.contact-info .container .info .box .table {
-  display: block;
-}
-.contact-info .container .info .box .table .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-.contact-info .container .info h3 {
-  padding-top: 30px;
+  flex-basis: 30%;
   color: #191919;
-  font-family: "DM Sans", sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 33px;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  padding: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact-info .container .icon {
+  font-size: x-large;
+  text-align: center;
+  width: 25%;
+  width: 25%;
+}
+.contact-info .container .text {
+  width: 100%;
 }
 
 .message-form {
-  border: 1px solid #F94D1C;
   display: flex;
   flex-direction: column;
 }
