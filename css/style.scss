@@ -1387,21 +1387,34 @@ header {
 
     .container {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
         gap: 2em;
-        padding-top: 3em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+
+        @media (min-width: 768px) {
+            grid-template-columns: auto;
+        }
+        
+        @media (min-width: 992px) {
+            grid-template-columns: auto auto auto;
+        }
 
         .bar {
-            display: flex;
-            flex-basis: 30%;
-            color: #191919;
-            border: 1px solid #191919;
+        display: flex;
+        flex-basis: 100%;
+        color: #191919;
+        border: 1px solid #191919; // Varför går den inte hela vägen i mobilt läge?!
+        padding: 25px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2em;
 
-            padding: 25px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 2em;
+            @media (max-width: 576px) {
+                flex-basis: 100%;
+                font-size: 0.8em;
+                padding: 15px;
+            }
         }
 
         .icon { // Inte 100% rund, men bäst hitills.
@@ -1421,43 +1434,110 @@ header {
         .text {
             width: 100%;
         }
-
     }
-
 }
 
 // contact 3) Message form
-.message-form { 
-    // display: flex;
-    // flex-direction: column; 
-  
-   .container {
+.message-form {
+
+    .container {
         background-color: #F0EFE9;
         display: flex;
         flex-direction: column;
         gap: 2em;
-        margin-top: 2em;
+        padding-top: 8em;
+        padding-bottom: 6em;
+        align-items: center;
+        justify-content: center;
 
         .text-styling {
             text-align: center;
         }
-  
-        label {
-            display: block;
-            padding: 5px 0;
-        }
-  
-        input {
-            display: block;
-            width: 100%;
-            padding: 8px;
-        }
-   
+
         textarea {
             resize: none;
             height: 200px;
+            width: 100%;
+            max-width: 1021px;
+            border-radius: 25px;
+            border: none;
+            color: #19191980;
+        }
+
+        .mb-3 {
+            .text-styling2 {
+                padding: 12px 20px;
+            }
+
+            label {
+                display: block;
+                padding: 5px 0;
+            }
+
+            input {
+                display: block;
+                width: 100%;
+                padding: 8px;
+                border-radius: 25px;
+                border: none;
+            }
         }
     }
+}
+
+// contact 4) Map
+.map {
+    padding-top: 8em;
+    // // height: 100%;
+    // // width: 100%;
+    // object-fit: cover;
+    // object-position: bottom;
+
+    // position: relative;
+    // // width: 100%;
+    // // max-width: 100%;
+    // // height: auto;
+ 
+
+    // img {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+
+    .map-wrapper img {
+        width: 100%;
+      
+        @media (min-width: 768px) {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        @media (min-width: 992px) {
+            width: 100%;
+            max-width: 1600;
+            margin: 0 auto;
+          }
+
+         @media (min-width: 1200px) {
+            width: 100%;
+            max-width: 1920px;
+            margin: 0 auto;
+          }
+      }
+
+    // @media (max-width: 576px) {
+    //     padding-top: 2em;
+    //     height: 360px;
+    //   }
+
+    // @media (max-width: 768px) {
+    //     padding-top: 4em;
+    //     width: 10%;
+    //   }   
 }
 
 footer {
@@ -1466,11 +1546,12 @@ footer {
     text-align: center;
     // height: 513px;
 
-    .streck {
+    .streck { 
         border-top: 1px solid #DAD9D3;
         padding-bottom: 2em;
         color: #ffffffb3;
-    }
+              }
+    
 
     img.background-lines4 {
         position: relative;

@@ -105,33 +105,39 @@
             <div class="container">
       
                 <div class="text-styling">
-                    <h2>Leave us a message for any information.</h2>
+                    <h2>Leave us a message<br>
+                        for any information.</h2>
                 </div>
                 <form id="register-private" method="post">
                     <div class="mb-3">
-                        <label for="firstName">Förnamn</label> 
-                        <input type="text" id="firstName" name="firstName" title="Förnamn" placeholder="Förnamn*" tabindex="1" class="p-1">
+                        <label for="firstName"></label> 
+                        <input class="text-styling2" type="text" id="firstName" name="firstName" title="Förnamn" placeholder="Name*" tabindex="1" class="p-1">
                     </div>
                 
                     <div class="mb-3">
-                        <label for="epost">Your email</label> 
-                        <input type="text" id="ePost" name="ePost" title="Epost" placeholder="epost*" tabindex="2" class="p-1">
+                        <label for="epost"></label> 
+                        <input class="text-styling2" type="text" id="ePost" name="ePost" title="Epost" placeholder="Email*" tabindex="2" class="p-1">
                     </div>
                     <div class="mb-3">
-                        <label for="yourMessage">Your message</label> 
+                        <label for="yourMessage"></label> 
                         <!-- <input type="email" id="yourMessage" name="yourMessage" title="Your Message" placeholder="Your Message" tabindex="3" class="p-1"> -->
-                        <textarea class="message-form" id="yourMessage" name="yourMessage"> </textarea>
+                        <textarea class="message-form text-styling2" id="yourMessage" name="yourMessage">Your message</textarea>
                     </div>
                     <div class="d-grid">
-                        <button class="btn btn-success" type="submit">Send message</button> </div>
+                        <button class="btn-yellow" type="submit">Send message</button> </div>
                     </form>
             </div>
         </section>
 
         <section class="map">
-            <div class="mapping">
+
+            <div class="row">
+                <div class="col-12">
+                  <div class="map-wrapper">
                 <img src="images/map.png" alt="Image of a map with company location">
             </div>
+        </div>
+      </div>
 
         </section>
     </main>

@@ -1217,20 +1217,37 @@ header .container .menu .main-menu .btn-login {
 
 .contact-info .container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   gap: 2em;
-  padding-top: 3em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+@media (min-width: 768px) {
+  .contact-info .container {
+    grid-template-columns: auto;
+  }
+}
+@media (min-width: 992px) {
+  .contact-info .container {
+    grid-template-columns: auto auto auto;
+  }
 }
 .contact-info .container .bar {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 100%;
   color: #191919;
   border: 1px solid #191919;
   padding: 25px;
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 2em;
+}
+@media (max-width: 576px) {
+  .contact-info .container .bar {
+    flex-basis: 100%;
+    font-size: 0.8em;
+    padding: 15px;
+  }
 }
 .contact-info .container .icon {
   background-color: #191919;
@@ -1254,23 +1271,64 @@ header .container .menu .main-menu .btn-login {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  margin-top: 2em;
+  padding-top: 8em;
+  padding-bottom: 6em;
+  align-items: center;
+  justify-content: center;
 }
 .message-form .container .text-styling {
   text-align: center;
 }
-.message-form .container label {
-  display: block;
-  padding: 5px 0;
-}
-.message-form .container input {
-  display: block;
-  width: 100%;
-  padding: 8px;
-}
 .message-form .container textarea {
   resize: none;
   height: 200px;
+  width: 100%;
+  max-width: 1021px;
+  border-radius: 25px;
+  border: none;
+  color: rgba(25, 25, 25, 0.5019607843);
+}
+.message-form .container .mb-3 .text-styling2 {
+  padding: 12px 20px;
+}
+.message-form .container .mb-3 label {
+  display: block;
+  padding: 5px 0;
+}
+.message-form .container .mb-3 input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 25px;
+  border: none;
+}
+
+.map {
+  padding-top: 8em;
+}
+.map .map-wrapper img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .map .map-wrapper img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .map .map-wrapper img {
+    width: 100%;
+    max-width: 1600;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .map .map-wrapper img {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
 }
 
 footer {
