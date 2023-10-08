@@ -52,24 +52,23 @@
         </div>
     </header>
     <main>
-
         <section class="connect">
             <nav>
                 <a href="index.html">Home</a>
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="lets-connect">
-                <h1>Let´s Connect</h1>
+                <h1>Let's Connect</h1>
             </div>
-
             <img src="images/background-lines.svg" alt="Wavey lines" class="bg-lines-contact">
         </section>
         
         <section class="contact-info">
             <div class="container">
 
-                <div class="bar">
-                    <img class="icon" src="images/cassandra.png">
+               <div class="bar">   <!-- Some FA icons wont work so I need to use some icons that dont fit as good. -->
+                 
+                    <div class="icon"><i class="fa-solid fa-map-marker"></i></div>
                     <div class="text">
                         <h3>Visit us</h3>
                         <p>Sveavägen 31<br>
@@ -78,7 +77,8 @@
                     </div>
                   </div>
                   <div class="bar">
-                    <img class="icon" src="images/cassandra.png">
+                
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
                     <div class="text">
                         <h3>Call us</h3>
                         <p>+46 (8) 121 470 50<br>
@@ -87,7 +87,8 @@
                     </div>
                   </div>
                   <div class="bar">
-                    <img class="icon" src="images/cassandra.png">
+                   
+                    <div class="icon"><i class="fa-regular fa-envelope"></i></div>
                     <div class="text">
                         <h3>Email us</h3>
                         <p>info@crito.com<br>
@@ -99,7 +100,13 @@
         </section>
 
         <section class="message-form">
+        
+
             <div class="container">
+      
+                <div class="text-styling">
+                    <h2>Leave us a message for any information.</h2>
+                </div>
                 <form id="register-private" method="post">
                     <div class="mb-3">
                         <label for="firstName">Förnamn</label> 
@@ -122,6 +129,9 @@
         </section>
 
         <section class="map">
+            <div class="mapping">
+                <img src="images/map.png" alt="Image of a map with company location">
+            </div>
 
         </section>
     </main>
