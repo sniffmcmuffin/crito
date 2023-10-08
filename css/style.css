@@ -524,7 +524,7 @@ header .container .menu .main-menu .btn-login {
   .about-company .container .about-company-right .bad-hack {
     display: flex;
     flex-direction: column;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
   }
 }
 .about-company .container .about-company-right h2 {
@@ -596,6 +596,9 @@ header .container .menu .main-menu .btn-login {
   background-color: #1f442b;
   border: 1px solid #191919;
   color: #191919;
+}
+.about-company .container .about-company-right .intro {
+  text-align: center;
 }
 
 .our-services {
@@ -686,21 +689,21 @@ header .container .menu .main-menu .btn-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: en;
   display: block;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 .our-services .container .services .btn-round-black {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: en;
   display: block;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 .choose-us {
@@ -800,8 +803,8 @@ header .container .menu .main-menu .btn-login {
   top: 300px;
 }
 
-.project-and-case {
-  margin-top: 120px;
+.project-and-case .container {
+  margin-top: -120px;
 }
 .project-and-case .container .section-title {
   text-align: center;
@@ -863,10 +866,65 @@ header .container .menu .main-menu .btn-login {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .meet-the-feebles .container .right-content {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
+@media (max-width: 992px) {
+  .meet-the-feebles .container .right-content {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
 .meet-the-feebles .container .services {
   flex-direction: row;
   display: flex;
   gap: 2rem;
+}
+@media (max-width: 576px) {
+  .meet-the-feebles .container .services {
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  .meet-the-feebles .container .services img {
+    width: 100%;
+    height: auto;
+  }
+  .meet-the-feebles .container .services .box {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .meet-the-feebles .container .services {
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  .meet-the-feebles .container .services .box {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .meet-the-feebles .container .services {
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  .meet-the-feebles .container .services .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .meet-the-feebles .container .services {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .meet-the-feebles .container .services .box {
+    flex-basis: auto;
+  }
 }
 .meet-the-feebles .container .services .box {
   display: flex;
@@ -894,46 +952,6 @@ header .container .menu .main-menu .btn-login {
   display: flex;
   justify-content: center;
   gap: 1em;
-}
-@media (max-width: 576px) {
-  .meet-the-feebles .container .services {
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .meet-the-feebles .container .services img {
-    width: 100%;
-    height: auto;
-  }
-  .meet-the-feebles .container .services .box {
-    flex-basis: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .meet-the-feebles .container .services {
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .meet-the-feebles .container .services .box {
-    flex-basis: 50%;
-  }
-}
-@media (max-width: 992px) {
-  .meet-the-feebles .container .services {
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-  .meet-the-feebles .container .services .box {
-    flex-basis: 50%;
-  }
-}
-@media (min-width: 1200px) {
-  .meet-the-feebles .container .services {
-    flex-wrap: nowrap;
-    gap: 2rem;
-  }
-  .meet-the-feebles .container .services .box {
-    flex-basis: auto;
-  }
 }
 
 .testimonials {
@@ -1210,8 +1228,7 @@ header .container .menu .main-menu .btn-login {
 .connect img.bg-lines-contact {
   position: absolute;
   background: var(--f0efe9) url(images/background-lines.svg) left bottom no-repeat;
-  bottom: 0;
-  bottom: 100px;
+  top: 200px;
   left: 0;
 }
 
@@ -1276,10 +1293,13 @@ header .container .menu .main-menu .btn-login {
   align-items: center;
   justify-content: center;
 }
-.message-form .container .text-styling {
+.message-form .container .mb-3 .text-styling {
   text-align: center;
 }
-.message-form .container textarea {
+.message-form .container .mb-3 .text-styling2 {
+  padding: 12px 20px;
+}
+.message-form .container .mb-3 textarea {
   resize: none;
   height: 200px;
   width: 100%;
@@ -1288,8 +1308,10 @@ header .container .menu .main-menu .btn-login {
   border: none;
   color: rgba(25, 25, 25, 0.5019607843);
 }
-.message-form .container .mb-3 .text-styling2 {
-  padding: 12px 20px;
+@media (min-width: 1200px) {
+  .message-form .container .mb-3 textarea {
+    width: 800px;
+  }
 }
 .message-form .container .mb-3 label {
   display: block;
@@ -1304,13 +1326,14 @@ header .container .menu .main-menu .btn-login {
 }
 
 .map {
-  padding-top: 8em;
+  padding-top: 2em;
 }
 .map .map-wrapper img {
   width: 100%;
 }
 @media (min-width: 768px) {
   .map .map-wrapper img {
+    padding-top: 4em;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -1318,6 +1341,7 @@ header .container .menu .main-menu .btn-login {
 }
 @media (min-width: 992px) {
   .map .map-wrapper img {
+    padding-top: 4em;
     width: 100%;
     max-width: 1600;
     margin: 0 auto;
@@ -1325,6 +1349,7 @@ header .container .menu .main-menu .btn-login {
 }
 @media (min-width: 1200px) {
   .map .map-wrapper img {
+    padding-top: 8em;
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
