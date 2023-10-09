@@ -854,85 +854,85 @@ header .container .menu .main-menu .btn-login {
   margin-bottom: 90px;
 }
 
-.meet-the-feebles {
+.meet-the-team {
   background-color: #f9d783;
 }
-.meet-the-feebles .container {
+.meet-the-team .container {
   display: flex;
   flex-direction: column;
 }
-.meet-the-feebles .container .right-content {
+.meet-the-team .container .right-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .meet-the-feebles .container .right-content {
+  .meet-the-team .container .right-content {
     flex-wrap: wrap;
     gap: 1em;
   }
 }
 @media (max-width: 992px) {
-  .meet-the-feebles .container .right-content {
+  .meet-the-team .container .right-content {
     flex-wrap: wrap;
     gap: 1em;
   }
 }
-.meet-the-feebles .container .services {
+.meet-the-team .container .services {
   flex-direction: row;
   display: flex;
   gap: 2rem;
 }
 @media (max-width: 576px) {
-  .meet-the-feebles .container .services {
+  .meet-the-team .container .services {
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
   }
-  .meet-the-feebles .container .services img {
+  .meet-the-team .container .services img {
     width: 100%;
     height: auto;
   }
-  .meet-the-feebles .container .services .box {
+  .meet-the-team .container .services .box {
     flex-basis: 50%;
   }
 }
 @media (max-width: 768px) {
-  .meet-the-feebles .container .services {
+  .meet-the-team .container .services {
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
   }
-  .meet-the-feebles .container .services .box {
+  .meet-the-team .container .services .box {
     flex-basis: 50%;
   }
 }
 @media (max-width: 992px) {
-  .meet-the-feebles .container .services {
+  .meet-the-team .container .services {
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
   }
-  .meet-the-feebles .container .services .box {
+  .meet-the-team .container .services .box {
     flex-basis: 50%;
   }
 }
 @media (min-width: 1200px) {
-  .meet-the-feebles .container .services {
+  .meet-the-team .container .services {
     flex-wrap: nowrap;
     gap: 2rem;
   }
-  .meet-the-feebles .container .services .box {
+  .meet-the-team .container .services .box {
     flex-basis: auto;
   }
 }
-.meet-the-feebles .container .services .box {
+.meet-the-team .container .services .box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #f9d783;
 }
-.meet-the-feebles .container .services h3 {
+.meet-the-team .container .services h3 {
   padding-top: 30px;
   color: #191919;
   font-family: "DM Sans", sans-serif;
@@ -940,7 +940,7 @@ header .container .menu .main-menu .btn-login {
   font-weight: bold;
   line-height: 33px;
 }
-.meet-the-feebles .container .services p {
+.meet-the-team .container .services p {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -948,7 +948,7 @@ header .container .menu .main-menu .btn-login {
   text-align: left;
   color: #f94d1c;
 }
-.meet-the-feebles .container .center-content {
+.meet-the-team .container .center-content {
   display: flex;
   justify-content: center;
   gap: 1em;
